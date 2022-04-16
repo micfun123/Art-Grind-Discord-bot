@@ -20,7 +20,15 @@ Themes = ['When Pigs Fly',
     'Hide and seek but on the moon',
     'A cake in a hat on a box in a hat',
     'For Tea and country. did i say country i meant cake',
-    '']
+    'Guard whales',
+    'A slice of the stars',
+    'Screeming Clouds',
+    'climb',
+    'United star force',
+    'The sun is shining',
+    'The moon is shining',
+    'Tree wars',
+    'swords vs pens']
 
 
 from discord.ext import commands, tasks
