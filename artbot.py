@@ -54,11 +54,11 @@ async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms ping time')
 
 
-@client.slash_command(guild_ids=[898557704858136617])
+@client.slash_command()
 async def hello(ctx):
     await ctx.respond("Hello!")
 
-@client.slash_command(guild_ids=[898557704858136617])
+@client.slash_command()
 async def duelidea(ctx):
     em = discord.Embed(title="Duel Idea", description="Here is a duel idea for you to try out!", color=0x00ff00)
     em.add_field(name="Theme : ", value=random.choice(Themes))
