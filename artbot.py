@@ -15,17 +15,12 @@ load_dotenv()
 
 Themes = ['When Pigs Fly', 
     'Tutle lord',
-    'magic ball answers Signs point to yes.',
-    'magicball affirms Yes definitely.',
-    'magicball affirms Yes.',
-    '8 ball magic said Most likely.',
-    'magic ball answers Very doubtful.',
-    'magic 8 ball answers Without a doubt.',
-    'mystic eight ball said Most likely.',
-    "magic ball answers Don't count on it.",
-    'Magic ball says 100% No',
-    'Magic ball does not know have you tryed google?',
-    "Its not looking so good"]
+    'A loxodon warlock who determinedly pushes through their fear of blood, spurred to adventure to escape their previous life.',
+    'You can Run but you can not Hide',
+    'Hide and seek but on the moon',
+    'A cake in a hat on a box in a hat',
+    'For Tea and country. did i say country i meant cake',
+    '']
 
 
 from discord.ext import commands, tasks
@@ -44,21 +39,22 @@ async def on_ready():
     print("we have powered on, I an alive.")
     await client.change_presence(activity=discord.Game(f"I do art stuff in {len(client.guilds)} servers."))
 
+testguild = 898557704858136617
 
-@client.command(help = "Gives you the ping of the bot",guild_ids=["898557704858136617"])
+@client.command(help = "Gives you the ping of the bot")
 async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms ping time')
 
 
-@client.slash_command(guild_ids=["898557704858136617"])
+@client.slash_command(guild_ids=[898557704858136617])
 async def hello(ctx):
     await ctx.respond("Hello!")
 
-@client.slash_command(guild_ids=["898557704858136617"])
-async def duelIdea(ctx):
+@client.slash_command(guild_ids=[898557704858136617])
+async def duelidea(ctx):
     em = discord.Embed(title="Duel Idea", description="Here is a duel idea for you to try out!", color=0x00ff00)
     em.add_field(name="Theme : ", value=random.choice(Themes))
-    await ctx.respond()
+    await ctx.respond(embed=em)
 
 TOKEN = os.getenv("DISCORD_TOKEN")
 
