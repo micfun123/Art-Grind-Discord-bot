@@ -8,8 +8,7 @@ import json
 import os
 from dotenv import load_dotenv
 from easy_pil import Editor, Canvas, Font, load_image, Text
-import datetime
-
+from datetime import datetime,time
 
 load_dotenv()
 
@@ -62,7 +61,7 @@ async def hello(ctx):
     await ctx.respond("Hello!")
 
 
-@tasks.loop(time=datetime.time(12,00))
+@tasks.loop(time=time(15,10))
 async def weekly_challenge():
     '''runs every day at 1PM UTC'''
     
@@ -70,37 +69,18 @@ async def weekly_challenge():
     today = datetime.utcnow().isoweekday()
     if today == 7:  # Monday == 7
         channel = client.get_channel(964936769277677578)
-
         allmes = []
         async for message in channel.history(limit=200):
             allmes.append(message)
-
         randoms = random.choice(allmes)
-        chennel2 = 964936769277677578
+        chennel2 = client.get_channel(964934223708430426)
         em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
         em.description = "<@&856677753125208081>\n Its your favorite time of the week again!\n"
         em.add_field(name="Challenge :", value=randoms.content)
         msg = await channel.fetch_message(randoms.id)
-        await msg.delete()
+        print(msg.content)
         await chennel2.send(embed=em)
-
-
-@client.command()
-async def testNOREMOVE(ctx):
-
-    channel = client.get_channel(964936769277677578)
-
-    allmes = []
-    async for message in channel.history(limit=200):
-        allmes.append(message)
-
-    randoms = randoms = random.choice(allmes)
-    chennel2 = 964936769277677578
-    em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
-    em.description = "<@&856677753125208081>\n Its your favorite time of the week again!\n"
-    em.add_field(name="Challenge :", value=randoms.content)
-    msg = await channel.fetch_message(randoms.id)
-    await ctx.send(embed=em)
+        await msg.delete()
 
 @client.command()
 async def test(ctx):
