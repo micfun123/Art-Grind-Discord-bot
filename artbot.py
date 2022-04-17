@@ -48,8 +48,8 @@ async def on_ready():
     # Setting `Playing ` status
     print("we have powered on, I an alive.")
     await client.change_presence(activity=discord.Game(f"I do art stuff in {len(client.guilds)} servers."))
+    weekly_challenge.start()
 
-testguild = 898557704858136617
 
 @client.command(help = "Gives you the ping of the bot")
 async def ping(ctx):
@@ -61,7 +61,8 @@ async def hello(ctx):
     await ctx.respond("Hello!")
 
 
-@tasks.loop(time=time(15,10))
+
+@tasks.loop(time=time(15,25))
 async def weekly_challenge():
     '''runs every day at 1PM UTC'''
     
@@ -73,7 +74,7 @@ async def weekly_challenge():
         async for message in channel.history(limit=200):
             allmes.append(message)
         randoms = random.choice(allmes)
-        chennel2 = client.get_channel(964934223708430426)
+        chennel2 = client.get_channel(915305657803108362)
         em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
         em.description = "<@&856677753125208081>\n Its your favorite time of the week again!\n"
         em.add_field(name="Challenge :", value=randoms.content)
