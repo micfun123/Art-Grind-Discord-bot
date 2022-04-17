@@ -28,7 +28,10 @@ Themes = ['When Pigs Fly',
     'The sun is shining',
     'The moon is shining',
     'Tree wars',
-    'swords vs pens']
+    'swords vs pens',
+    'Frog in a Hat',
+    'Assassin cat',
+    'suited and booted']
 
 
 from discord.ext import commands, tasks
