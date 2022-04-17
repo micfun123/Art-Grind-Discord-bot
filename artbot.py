@@ -77,7 +77,7 @@ async def weekly_challenge():
         chennel2 = 964936769277677578
         em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
         em.description = "<@&856677753125208081>\n Its your favorite time of the week again!\n"
-        em.add_field(name="challenge", value=randoms)
+        em.add_field(name="Challenge : ", value=randoms)
         await chennel2.send(embed=em)
 
 
@@ -94,7 +94,7 @@ async def test(ctx):
     chennel2 = 964936769277677578
     em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
     em.description = "<@&856677753125208081>\n Its your favorite time of the week again!\n"
-    em.add_field(name="challenge", value=randoms)
+    em.add_field(name="Challenge :", value=randoms)
     await ctx.send(embed=em)
 
     
