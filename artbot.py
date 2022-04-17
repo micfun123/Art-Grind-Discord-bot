@@ -68,7 +68,7 @@ async def weekly_challenge():
     
     # check if the day is monday
     today = datetime.utcnow().isoweekday()
-    if today == 7:  # Monday == 1
+    if today == 7:  # Monday == 7
         channel = client.get_channel(964936769277677578)
 
         allmes = []
@@ -85,6 +85,22 @@ async def weekly_challenge():
         await chennel2.send(embed=em)
 
 
+@client.command()
+async def testNOREMOVE(ctx):
+
+    channel = client.get_channel(964936769277677578)
+
+    allmes = []
+    async for message in channel.history(limit=200):
+        allmes.append(message)
+
+    randoms = randoms = random.choice(allmes)
+    chennel2 = 964936769277677578
+    em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
+    em.description = "<@&856677753125208081>\n Its your favorite time of the week again!\n"
+    em.add_field(name="Challenge :", value=randoms.content)
+    msg = await channel.fetch_message(randoms.id)
+    await ctx.send(embed=em)
 
 @client.command()
 async def test(ctx):
