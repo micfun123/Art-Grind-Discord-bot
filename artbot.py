@@ -62,7 +62,7 @@ async def hello(ctx):
 
 
 
-@tasks.loop(time=time(15,25))
+@tasks.loop(time=time(12,00))
 async def weekly_challenge():
     '''runs every day at 1PM UTC'''
     
