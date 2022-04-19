@@ -54,8 +54,8 @@ def generate_i_made(url):
 
     img = im1.copy()
     img = img.convert("RGBA")
-    img.alpha_composite(im2)
-    img.paste(im2.rotate(30 , resample=Image.BILINEAR, expand = 1, fillcolor = (255,255,255,0)), (1300, 450))
+    img.alpha_composite(im2 (1300, 450))
+    #img.paste(im2.rotate(30 , resample=Image.BILINEAR, expand = 1, fillcolor = (255,255,255,0)), (1300, 450))
     d = BytesIO()
     d.seek(0)
     img.save(d, "PNG")
