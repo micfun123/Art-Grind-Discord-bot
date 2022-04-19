@@ -130,7 +130,7 @@ async def duelidea(ctx):
     await ctx.respond(embed=em)
 
 @client.slash_command()
-async def Look_What_I_wrote(ctx,text):
+async def look_what_i_wrote(ctx,text):
     em = discord.Embed(title="MEME", description="Here is a duel idea for you to try out!", color=0x00ff00)
     em.add_image(i_wrote(text))
     await ctx.respond(embed=em)
