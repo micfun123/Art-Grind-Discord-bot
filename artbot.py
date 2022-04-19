@@ -1,16 +1,18 @@
+from pydoc import describe
+from string import whitespace
 import discord
 import random
-import aiohttp
 import os
 from os import listdir
 from os.path import isfile, join
-import json
 import os
 from dotenv import load_dotenv
 from PIL import Image, ImageDraw, ImageFont , ImageEnhance
 from io import BytesIO
 from datetime import datetime,time
 import textwrap
+import urllib
+import asyncio
 
 load_dotenv()
 
@@ -37,6 +39,28 @@ Themes = ['When Pigs Fly',
 
 from discord.ext import commands, tasks
 
+def generate_i_made(url):
+    hdr = { 'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'}
+    req = urllib.request.Request(url, headers=hdr)
+    response = urllib.request.urlopen(req) 
+    f = BytesIO(response.read())
+    
+    im1 = Image.open("images/IMG_4397.png")
+    im1 = im1.convert("RGBA")
+    im2 = Image.open(f)
+    im2 = im2.convert("RGBA")
+    im2 = im2.resize((400, 360))
+    
+
+    img = im1.copy()
+    img = img.convert("RGBA")
+    img.alpha_composite(im2)
+    img.paste(im2.rotate(30 , resample=Image.BILINEAR, expand = 1, fillcolor = (255,255,255,0)), (1300, 450))
+    d = BytesIO()
+    d.seek(0)
+    img.save(d, "PNG")
+    d.seek(0)
+    return d
 
 intents = discord.Intents.all()
 intents.presences = True
@@ -44,6 +68,7 @@ intents.members = True
 intents.guilds=True
 
 client = commands.Bot(command_prefix= "^", intents=intents, presences = True, members = True, guilds=True, case_insensitive=True)
+
 
 @client.event
 async def on_ready():
@@ -119,6 +144,7 @@ async def test(ctx):
     await msg.delete()
     await ctx.send(embed=em)
 
+
     
 
 @client.slash_command()
@@ -130,6 +156,12 @@ async def duelidea(ctx):
 @client.slash_command()
 async def look_what_i_wrote(ctx,*,text):
     t = i_wrote(text)
+    await ctx.respond(file=discord.File(t, "meme.png"))
+
+
+@client.slash_command(guild_ids=[856677753108693002],description="test,test")
+async def look_what_i_drew(ctx,*,url):
+    t = generate_i_made(url)
     await ctx.respond(file=discord.File(t, "meme.png"))
     
 
