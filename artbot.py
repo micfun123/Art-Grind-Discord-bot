@@ -7,8 +7,10 @@ from os.path import isfile, join
 import json
 import os
 from dotenv import load_dotenv
-from easy_pil import Editor, Canvas, Font, load_image, Text
+from PIL import Image, ImageDraw, ImageFont , ImageEnhance
+from io import BytesIO
 from datetime import datetime,time
+import textwrap
 
 load_dotenv()
 
@@ -55,6 +57,24 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms ping time')
 
+def i_wrote(text):
+    im = Image.open("images/IMG_4398.png")
+    draw = ImageDraw.Draw(im)
+    font = ImageFont.truetype("Roboto-Black.ttf", 16)
+
+    margin = 80
+    offset = 420
+    for line in textwrap.wrap(text, width=25):
+            draw.text((margin, offset), line, font=font, fill=(0, 0, 0))
+            offset += font.getsize(line)[1]
+
+    
+
+    d = BytesIO()
+    d.seek(0)
+    im.save(d, "PNG")
+    d.seek(0)
+    return d
 
 @client.slash_command()
 async def hello(ctx):
@@ -109,7 +129,11 @@ async def duelidea(ctx):
     em.add_field(name="Theme : ", value=random.choice(Themes))
     await ctx.respond(embed=em)
 
-
+@client.slash_command()
+async def Look_What_I_wrote(ctx,text):
+    em = discord.Embed(title="MEME", description="Here is a duel idea for you to try out!", color=0x00ff00)
+    em.add_image(i_wrote(text))
+    await ctx.respond(embed=em)
     
 
 TOKEN = os.getenv("DISCORD_TOKEN")
