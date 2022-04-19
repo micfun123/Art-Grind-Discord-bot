@@ -60,15 +60,13 @@ async def ping(ctx):
 def i_wrote(text):
     im = Image.open("images/IMG_4398.png")
     draw = ImageDraw.Draw(im)
-    font = ImageFont.truetype("Roboto-Black.ttf", 16)
+    font = ImageFont.truetype("Roboto-Black.ttf", 50)
 
-    margin = 80
-    offset = 420
-    for line in textwrap.wrap(text, width=25):
+    margin = 900
+    offset = 350
+    for line in textwrap.wrap(text, width=10):
             draw.text((margin, offset), line, font=font, fill=(0, 0, 0))
             offset += font.getsize(line)[1]
-
-    
 
     d = BytesIO()
     d.seek(0)
@@ -130,10 +128,9 @@ async def duelidea(ctx):
     await ctx.respond(embed=em)
 
 @client.slash_command()
-async def look_what_i_wrote(ctx,text):
-    em = discord.Embed(title="MEME", description="Here is a duel idea for you to try out!", color=0x00ff00)
-    em.set_image(i_wrote(text))
-    await ctx.respond(embed=em)
+async def look_what_i_wrote(ctx,*,text):
+    t = i_wrote(text)
+    await ctx.respond(file=discord.File(t, "meme.png"))
     
 
 TOKEN = os.getenv("DISCORD_TOKEN")
