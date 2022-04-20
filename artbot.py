@@ -104,6 +104,14 @@ async def hello(ctx):
     await ctx.respond("Hello!")
 
 
+@client.command(help = "Gives you the ping of the bot")
+async def status(ctx,*, status):
+    if ctx.author.id == int(481377376475938826):
+        await client.change_presence(activity=discord.Game(f"{status}"))
+    else: 
+        await ctx.send("Only Lord Mic can do this")
+
+
 
 @tasks.loop(time=time(12,00))
 async def weekly_challenge():
