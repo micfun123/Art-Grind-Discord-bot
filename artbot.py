@@ -151,7 +151,11 @@ async def test(ctx):
     msg = await channel.fetch_message(randoms.id)
     await ctx.send(embed=em)
 
-
+@client.slash_command()
+async def Code(ctx):
+    em = discord.Embed(title="You want my code", description="I dont give my code to any one you know", color=0x00ff00)
+    em.add_field(name="Link :", value="https://github.com/micfun123/Art-Grind-Discord-bot")
+    await ctx.respond(embed=em)
     
 
 @client.slash_command()
