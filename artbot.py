@@ -35,7 +35,30 @@ Themes = ['When Pigs Fly',
     'swords vs pens',
     'Frog in a Hat',
     'Assassin cat',
-    'suited and booted']
+    'suited and booted' 
+    'Sheep',
+    'Spirits',
+    'Unbreakable', 
+    'Castle', 
+    'Lizard', 
+    'Feline', 
+    'Bard', 
+    'Warrior',
+    'Mage', 
+    'Library', 
+    'Crying', 
+    'Shadows', 
+    'Light', 
+    'Hand Holding', 
+    'Family', 
+    'Brotherly', 
+    'Teamwork', 
+    'Party', 
+    'Steam', 
+    'Powerstation', 
+    'Steampunk',
+    'Cave'
+    ]
 
 
 from discord.ext import commands, tasks
