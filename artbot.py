@@ -159,13 +159,6 @@ async def code(ctx):
     await ctx.respond(embed=em)
     
 
-@client.slash_command()
-async def maker(ctx):
-    em = discord.Embed(title="Oh My maker", description="I was made by the worlds by lord <@481377376475938826>. ", color=0x00ff00)
-    em.add_field(name="Github :", value="<https://github.com/micfun123/>")
-    em.add_field(name="twitter :", value="<https://twitter.com/Michaelrbparker>")
-    em.footer(name = "Go say hi to him")
-    await ctx.respond(embed=em)
 
 @client.slash_command()
 async def duelidea(ctx):
