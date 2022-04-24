@@ -91,7 +91,7 @@ intents.presences = True
 intents.members = True
 intents.guilds=True
 
-client = commands.Bot(command_prefix= "^", intents=intents, presences = True, members = True, guilds=True, case_insensitive=True)
+client = commands.Bot(command_prefix= "^", intents=intents, presences = True, members = True, guilds=True, case_insensitive=True,allowed_mentions = discord.AllowedMentions(everyone=True))
 
 
 @client.event
@@ -200,6 +200,12 @@ async def look_what_i_drew(ctx,*,url):
     t = generate_i_made(url)
     await ctx.respond(file=discord.File(t, "meme.png"))
     
+@client.slash_command(guild_ids=[856677753108693002],description="timer in mins")
+async def timer(ctx,*,time):
+    await ctx.respond(f"Timer set for {time} mins")
+    await asyncio.sleep(int(time * 60))
+    await ctx.respond(f"Timer done <@{ctx.author.id}>")
+
 
 TOKEN = os.getenv("DISCORD_TOKEN")
 
