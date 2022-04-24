@@ -205,7 +205,7 @@ async def look_what_i_drew(ctx,*,url):
     t = generate_i_made(url)
     await ctx.respond(file=discord.File(t, "meme.png"))
     
-@client.slash_command(guild_ids=[856677753108693002],description="timer in mins")
+@client.slash_command(description="timer in mins")
 async def timer(ctx,*,time):
     await ctx.respond(f"Timer set for {time} mins")
     await asyncio.sleep(int(time * 60))
