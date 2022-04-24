@@ -207,8 +207,8 @@ async def look_what_i_drew(ctx,*,url):
     
 @client.slash_command(description="timer in mins")
 async def timer(ctx,*,time):
-    await ctx.respond(f"Timer set for {time} mins")
-    await asyncio.sleep(int(time * 60))
+    await ctx.respond(f"Timer set for {time} seconds")
+    await asyncio.sleep(int(time))
     await ctx.respond(f"Timer done <@{ctx.author.id}>")
 
 
