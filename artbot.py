@@ -136,6 +136,10 @@ async def status(ctx,*, status):
         await ctx.send("Only Lord Mic can do this")
 
 
+@client.command()
+async def pingtest(ctx):
+    await asyncio.sleep(int(5))
+    await ctx.send(f'<@&856677753125208081>')
 
 @tasks.loop(time=time(12,00))
 async def weekly_challenge():
@@ -170,10 +174,11 @@ async def test(ctx):
     randoms = random.choice(allmes)
     chennel2 = 964936769277677578
     em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
-    em.description = "<@&856677753125208081>\n Its your favorite time of the week again!\n"
+    em.description = "Its your favorite time of the week again!\n"
     em.add_field(name="Challenge :", value=randoms.content)
     msg = await channel.fetch_message(randoms.id)
     await ctx.send(embed=em)
+    await ctx.send(f'<@&856677753125208081>')
 
 @client.slash_command()
 async def code(ctx):
