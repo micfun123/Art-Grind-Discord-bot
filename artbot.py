@@ -214,7 +214,7 @@ async def suggest(ctx,*,suggestion):
     await channel.send(embed=em)
 
 #suggest commands
-@client.slash_command(description="Suggest a command")
+@client.slash_command(guild_ids=[856677753108693002],description="Suggest a command")
 async def suggest_theme(ctx,*,suggestion):
     await ctx.respond(f"{suggestion} has been added to the theme list")
     channel = client.get_channel(967784275216846968)
