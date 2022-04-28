@@ -214,11 +214,24 @@ async def look_what_i_drew(ctx,*,url):
     t = generate_i_made(url)
     await ctx.respond(file=discord.File(t, "meme.png"))
     
-@client.slash_command(description="timer in mins")
-async def timer(ctx,*,time):
-    await ctx.respond(f"Timer set for {time} seconds")
-    await asyncio.sleep(int(time))
-    await ctx.respond(f"Timer done <@{ctx.author.id}>")
+#suggest commands
+@client.command(help="Suggest a command")
+async def suggest(ctx,*,suggestion):
+    channel = client.get_channel(967784275216846968)
+    em = discord.Embed(title="Suggestion", description=f"{suggestion}", color=0x00ff00)
+    em.set_footer(text=f"Suggested by {ctx.author}")
+    await channel.send(embed=em)
+
+#suggest commands
+@client.slash_command(guild_ids=[856677753108693002],description="Suggest a command")
+async def suggest_theme(ctx,*,suggestion):
+    await ctx.respond(f"{suggestion} has been added to the theme list")
+    channel = client.get_channel(967784275216846968)
+    em = discord.Embed(title="Suggestion", description=f"{suggestion}", color=0x00ff00)
+    em.set_footer(text=f"Suggested by {ctx.author}")
+    await channel.send(embed=em)
+
+
 
 
 TOKEN = os.getenv("DISCORD_TOKEN")
