@@ -57,7 +57,10 @@ Themes = ['When Pigs Fly',
     'Powerstation', 
     'Steampunk',
     'Cave',
-    'dinner for none'
+    'dinner for none',
+    'superhero',
+    'supervillain',
+    'underwater'
     ]
 
 
@@ -186,6 +189,12 @@ async def code(ctx):
     em.add_field(name="Link :", value="https://github.com/micfun123/Art-Grind-Discord-bot")
     await ctx.respond(embed=em)
     
+@client.slash_command(guild_ids=[856677753108693002],description="Suggest a theme for the weekly challenge")
+async def suggest_theme(ctx,theme):
+    em = discord.Embed(title="Suggested theme {ctx.author.name}", description=f"{theme}", color=0x00ff00)
+    await ctx.respond("sent")
+    channelsend = client.get_channel(967784275216846968)
+    await channelsend.send(embed=em)
 
 
 @client.slash_command()
