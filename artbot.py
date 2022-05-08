@@ -61,7 +61,10 @@ Themes = ['When Pigs Fly',
     'superhero',
     'supervillain',
     'underwater',
-    'What if...'
+    'What if...',
+    'The Cat wars',
+    'cats in space',
+    'What if, 2 cats start fighting with light sabers'
     ]
 
 
@@ -232,6 +235,11 @@ async def suggest_theme(ctx,*,suggestion):
     em = discord.Embed(title="Suggestion", description=f"{suggestion}", color=0x00ff00)
     em.set_footer(text=f"Suggested by {ctx.author}")
     await channel.send(embed=em)
+
+#make server invite link
+@client.slash_command(description="Make an invite link for the server")
+async def invite(ctx):
+    await ctx.respond(f"{ctx.author.mention} here is your invite link: {await client.invite(ctx.guild)}")
 
 
 
