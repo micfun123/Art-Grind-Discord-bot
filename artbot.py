@@ -196,7 +196,7 @@ async def code(ctx):
     
 @client.slash_command(guild_ids=[856677753108693002],description="Suggest a theme for the weekly challenge")
 async def suggest_theme(ctx,theme):
-    em = discord.Embed(title="Suggested theme {ctx.author.name}", description=f"{theme}", color=0x00ff00)
+    em = discord.Embed(title="Suggestion", description=f"{theme}", color=0x00ff00)
     await ctx.respond("sent")
     channelsend = client.get_channel(967784275216846968)
     await channelsend.send(embed=em)
@@ -227,14 +227,6 @@ async def suggest(ctx,*,suggestion):
     em.set_footer(text=f"Suggested by {ctx.author}")
     await channel.send(embed=em)
 
-#suggest commands
-@client.slash_command(guild_ids=[856677753108693002],description="Suggest a command")
-async def suggest_theme(ctx,*,suggestion):
-    ctx.respond("sent")
-    channel = client.get_channel(967784275216846968)
-    em = discord.Embed(title="Suggestion", description=f"{suggestion}", color=0x00ff00)
-    em.set_footer(text=f"Suggested by {ctx.author}")
-    await channel.respond(embed=em)
 
 #make server invite link
 @client.slash_command(description="Make an invite link for the server")
