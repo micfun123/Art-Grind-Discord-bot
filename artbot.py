@@ -1,6 +1,7 @@
 from pydoc import describe
 from string import whitespace
 from unicodedata import name
+from xml.dom.expatbuilder import theDOMImplementation
 import discord
 import random
 import os
@@ -17,55 +18,8 @@ import asyncio
 
 load_dotenv()
 
-Themes = ['When Pigs Fly', 
-    'Tutle lord',
-    'A loxodon warlock who determinedly pushes through their fear of blood, spurred to adventure to escape their previous life.',
-    'You can Run but you can not Hide',
-    'Hide and seek but on the moon',
-    'A cake in a hat on a box in a hat',
-    'For Tea and country. did i say country i meant cake',
-    'Guard whales',
-    'A slice of the stars',
-    'Screeming Clouds',
-    'climb',
-    'The sun is shining',
-    'The moon is shining',
-    'Tree wars',
-    'swords vs pens',
-    'Frog in a Hat',
-    'Assassin cat',
-    'suited and booted' 
-    'Sheep',
-    'Spirits',
-    'Unbreakable', 
-    'Castle', 
-    'Lizard', 
-    'Feline', 
-    'Bard', 
-    'Warrior',
-    'Mage', 
-    'Library', 
-    'Crying', 
-    'Shadows', 
-    'Light', 
-    'Hand Holding', 
-    'Family', 
-    'Brotherly', 
-    'Teamwork', 
-    'Party', 
-    'Steam', 
-    'Powerstation', 
-    'Steampunk',
-    'Cave',
-    'dinner for none',
-    'superhero',
-    'supervillain',
-    'underwater',
-    'What if...',
-    'The Cat wars',
-    'cats in space',
-    'What if, 2 cats start fighting with light sabers'
-    ]
+ 
+
 
 
 from discord.ext import commands, tasks
@@ -204,8 +158,13 @@ async def suggest_theme(ctx,theme):
 
 @client.slash_command()
 async def duelidea(ctx):
+    channel = client.get_channel(975383857115332729)
+
+    allmes = []
+    async for message in channel.history(limit=200):
+        allmes.append(message)
     em = discord.Embed(title="Duel Idea", description="Here is a duel idea for you to try out!", color=0x00ff00)
-    em.add_field(name="Theme : ", value=random.choice(Themes))
+    em.add_field(name="Theme : ", value=random.choice(allmes))
     await ctx.respond(embed=em)
 
 @client.slash_command()
@@ -232,6 +191,20 @@ async def suggest(ctx,*,suggestion):
 @client.slash_command(description="Make an invite link for the server")
 async def invite(ctx):
     await ctx.respond(f"{ctx.author.mention} here is your invite link: {await client.invite(ctx.guild)}")
+
+@client.command(help="Dump")
+async def dump(ctx):
+    
+    channel = client.get_channel(975383857115332729)
+
+    allmes = []
+    async for message in channel.history(limit=200):
+        allmes.append(message)
+
+    for i in allmes:
+        await ctx.send(i.content)
+    
+    
 
 
 
