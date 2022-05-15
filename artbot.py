@@ -201,8 +201,12 @@ async def dump(ctx):
     async for message in channel.history(limit=200):
         allmes.append(message)
 
+    t= 0
     for i in allmes:
+        t+1
         await ctx.send(i.content)
+
+    await ctx.send(f"{t}")
     
     
 
