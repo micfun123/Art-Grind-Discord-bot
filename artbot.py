@@ -203,7 +203,7 @@ async def dump(ctx):
 
     t= 0
     for i in allmes:
-        t+1
+        t = t + 1
         await ctx.send(i.content)
 
     await ctx.send(f"{t}")
