@@ -164,7 +164,7 @@ async def duelidea(ctx):
     async for message in channel.history(limit=200):
         allmes.append(message)
     em = discord.Embed(title="Duel Idea", description="Here is a duel idea for you to try out!", color=0x00ff00)
-    em.add_field(name="Theme : ", value=random.choice(allmes))
+    em.add_field(name="Theme : ", value=random.choice(allmes).content)
     await ctx.respond(embed=em)
 
 @client.slash_command()
