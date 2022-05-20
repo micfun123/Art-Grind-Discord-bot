@@ -15,6 +15,7 @@ from datetime import datetime,time
 import textwrap
 import urllib
 import asyncio
+import json
 
 load_dotenv()
 
@@ -209,6 +210,65 @@ async def dump(ctx):
     await ctx.send(f"{t}")
     
     
+@client.command(help="Dump")
+async def dumpremoveduplicate(ctx):
+    
+    channel = client.get_channel(975383857115332729)
+
+    allmes = []
+    async for message in channel.history(limit=200):
+        allmes.append(message)
+
+    t= 0
+    for i in allmes:
+        t = t + 1
+        await ctx.send(i.content)
+
+    await ctx.send(f"{t}")
+    
+#add 1 point to score board 
+@client.command(help="Add 1 point to the score board")
+async def addpoint(ctx,*,user):
+    with open('score.json', 'r') as f:
+        data = json.load(f)
+    if user in data:
+        data[user] += 1
+    else:
+        data[user] = 1
+    with open('score.json', 'w') as f:
+        json.dump(data, f)
+    await ctx.send(f"{user} has {data[user]} points")
+
+#removes 1 point to score board
+@client.command(help="Remove 1 point to the score board")
+async def removepoint(ctx,*,user):
+    with open('score.json', 'r') as f:
+        data = json.load(f)
+    if user in data:
+        data[user] -= 1
+    else:
+        data[user] = 0
+    with open('score.json', 'w') as f:
+        json.dump(data, f)
+    await ctx.send(f"{user} has {data[user]} points")   
+
+#top 10 score board
+@client.command()
+async def leaderboardscore(ctx):
+    with open('score.json', 'r') as f:
+        data = json.load(f)
+        sorted_data = sorted(data.items(), key=lambda x: x[1], reverse=True)
+        em = discord.Embed(title="Top 10", description="Top 10 score board", color=0x00ff00)
+        for i in sorted_data[:10]:
+            name = i[0]
+            await ctx.send(f"{name} has {i[1]} points")
+            em.add_field(name=f"{[i][0]}", value=i[1])
+
+
+        await ctx.send(embed=em)
+
+
+
 
 
 
