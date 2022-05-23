@@ -281,7 +281,7 @@ async def fullscore(ctx):
     with open('score.json', 'r') as f:
         data = json.load(f)
         sorted_data = sorted(data.items(), key=lambda x: x[1], reverse=True)
-        em = discord.Embed(title="Top 10", description="Top 10 score board", color=0x00ff00)
+        em = discord.Embed(title="Full leader board", description="Top 10 score board", color=0x00ff00)
         for i in sorted_data:
             id = i[0]
             id = id.replace("<@", "")
@@ -294,6 +294,7 @@ async def fullscore(ctx):
 
             except:
                 em.add_field(name=f"{i[0]}", value=i[1])
+    await ctx.send(embed=em)
 
 
 
