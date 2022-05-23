@@ -260,9 +260,17 @@ async def leaderboardscore(ctx):
         sorted_data = sorted(data.items(), key=lambda x: x[1], reverse=True)
         em = discord.Embed(title="Top 10", description="Top 10 score board", color=0x00ff00)
         for i in sorted_data[:10]:
-            name = i[0]
-            await ctx.send(f"{name} has {i[1]} points")
-            em.add_field(name=f"{[i][0]}", value=i[1])
+            id = i[0]
+            id = id.replace("<@", "")
+            id = id.replace(">", "")
+            print(id)
+            try: 
+                user = await ctx.guild.fetch_member(id)
+                name = user.name
+                em.add_field(name=f"{name}", value=i[1])
+
+            except:
+                em.add_field(name=f"{i[0]}", value=i[1])
 
 
         await ctx.send(embed=em)
