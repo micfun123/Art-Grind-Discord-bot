@@ -290,10 +290,10 @@ async def fullscore(ctx):
             try: 
                 user = await ctx.guild.fetch_member(id)
                 name = user.name
-                em.add_field(name=f"{name}", value=i[1])
+                em.add_field(name=f"{name}", value=i[1] ,inline=False)
 
             except:
-                em.add_field(name=f"{i[0]}", value=i[1])
+                em.add_field(name=f"{i[0]}", value=i[1] ,inline=False)
     await ctx.send(embed=em)
 
 
