@@ -228,6 +228,7 @@ async def dumpremoveduplicate(ctx):
     
 #add 1 point to score board 
 @client.command(help="Add 1 point to the score board")
+@commands.has_permissions(administrator=True)
 async def addpoint(ctx,*,user):
     with open('score.json', 'r') as f:
         data = json.load(f)
@@ -241,6 +242,7 @@ async def addpoint(ctx,*,user):
 
 #removes 1 point to score board
 @client.command(help="Remove 1 point to the score board")
+@commands.has_permissions(administrator=True)
 async def removepoint(ctx,*,user):
     with open('score.json', 'r') as f:
         data = json.load(f)
