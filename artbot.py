@@ -260,7 +260,7 @@ async def leaderboardscore(ctx):
     with open('score.json', 'r') as f:
         data = json.load(f)
         sorted_data = sorted(data.items(), key=lambda x: x[1], reverse=True)
-        em = discord.Embed(title="Top 10", description="Top 10 score board", color=0x00ff00)
+        em = discord.Embed(title="All Scores", description="Top 10 score board", color=0x00ff00)
         for i in sorted_data[:10]:
             id = i[0]
             id = id.replace("<@", "")
@@ -283,7 +283,7 @@ async def fullscore(ctx):
     with open('score.json', 'r') as f:
         data = json.load(f)
         sorted_data = sorted(data.items(), key=lambda x: x[1], reverse=True)
-        em = discord.Embed(title="Full leader board", description="Top 10 score board", color=0x00ff00)
+        em = discord.Embed(title="Full leader board", description="If you want to see the top ten do ```leaderboardscore```", color=0x00ff00)
         for i in sorted_data:
             id = i[0]
             id = id.replace("<@", "")
