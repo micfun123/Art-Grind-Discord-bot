@@ -299,6 +299,28 @@ async def fullscore(ctx):
     await ctx.send(embed=em)
 
 
+#birthday mode. When its a birthday use
+@client.command(help="Birthday mode")
+async def birthday(ctx):
+    ctx.message.delete()
+    channel = ctx.channel
+    em = discord.Embed(title="Happy Birthday! 🎉🍰🎂🥳", description="To Mr. <@804913699231236097> \n Hope you have a Great Birthday \n from the Art Grind Staff ", color=0x00ff00)
+    await channel.send(embed=em)
+
+   #style prompt command
+@client.command(name="styleprompt",help = "Prompts you a Style to draw")
+async def StylePrompt_command(ctx):
+        lines = open('StylePrompt.txt').read().splitlines()
+        myline =random.choice(lines)
+        em = discord.Embed(title="Style Prompt. Have fun making", description=f"{myline}", color=0x20BEFF)
+        await ctx.send(embed=em)
+
+@client.slash_command(name="styleprompt")
+async def styleprompt_slash(ctx):
+        lines = open('StylePrompt.txt').read().splitlines()
+        myline =random.choice(lines)
+        em = discord.Embed(title="Style Prompt. Have fun making", description=f"{myline}", color=0x20BEFF)
+        await ctx.respond(embed=em)
 
 
 
