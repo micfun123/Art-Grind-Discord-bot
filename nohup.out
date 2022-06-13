@@ -1,0 +1,1415 @@
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "challenge\" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "challenge" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "challenge" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "challenge" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "challenge" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "test" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "test" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "test" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "test" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "test" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "test" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "test" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "test" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "test" is not found
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "clear" is not found
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "add" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "testNOREMOVE" is not found
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Ignoring exception in command look_what_i_wrote:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 135, in look_what_i_wrote
+    em.add_image(i_wrote(text))
+AttributeError: 'Embed' object has no attribute 'add_image'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Embed' object has no attribute 'add_image'
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "status" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "status" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "status" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "status" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "status" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "status" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "status" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "status" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "status" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "status" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "status" is not found
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Traceback (most recent call last):
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 156, in <module>
+    async def Code(ctx):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 868, in decorator
+    result = command(**kwargs)(func)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 1515, in decorator
+    return cls(func, **attrs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 583, in __init__
+    validate_chat_input_name(name)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 1556, in validate_chat_input_name
+    raise ValidationError(
+discord.errors.ValidationError: Chat input command names and options must be lowercase. Received Code
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "me" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "l" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "Its" is not found
+Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 770, in process_application_commands
+    command = self._application_commands[interaction.data["id"]]
+KeyError: '967773406726598656'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1082, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 788, in process_application_commands
+    await self.sync_commands(unregister_guilds=[guild_id])
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In 0: Invalid application command id provided
+Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 770, in process_application_commands
+    command = self._application_commands[interaction.data["id"]]
+KeyError: '967773659328557137'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1082, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 788, in process_application_commands
+    await self.sync_commands(unregister_guilds=[guild_id])
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In 0: Invalid application command id provided
+Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 770, in process_application_commands
+    command = self._application_commands[interaction.data["id"]]
+KeyError: '967777421870899241'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1082, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 788, in process_application_commands
+    await self.sync_commands(unregister_guilds=[guild_id])
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In 0: Invalid application command id provided
+Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 770, in process_application_commands
+    command = self._application_commands[interaction.data["id"]]
+KeyError: '967778823917699094'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1082, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 788, in process_application_commands
+    await self.sync_commands(unregister_guilds=[guild_id])
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In 0: Invalid application command id provided
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "pingtest" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "pingtest" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "pingtest" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "pingtest" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "pingtest" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "pingtest" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "pingtest" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "pingtest" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "pingtest" is not found
+Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 770, in process_application_commands
+    command = self._application_commands[interaction.data["id"]]
+KeyError: '967779309353840752'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1082, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 788, in process_application_commands
+    await self.sync_commands(unregister_guilds=[guild_id])
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In 0: Invalid application command id provided
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Nuclear Winter
+**Suggested by:**
+<@!645091543950032916>
+Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 770, in process_application_commands
+    command = self._application_commands[interaction.data["id"]]
+KeyError: '967789727770116166'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1082, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 788, in process_application_commands
+    await self.sync_commands(unregister_guilds=[guild_id])
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In 0: Invalid application command id provided
+Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 770, in process_application_commands
+    command = self._application_commands[interaction.data["id"]]
+KeyError: '967796773185806366'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1082, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 788, in process_application_commands
+    await self.sync_commands(unregister_guilds=[guild_id])
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In 0: Invalid application command id provided
+Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 770, in process_application_commands
+    command = self._application_commands[interaction.data["id"]]
+KeyError: '968161646587547668'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1082, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 788, in process_application_commands
+    await self.sync_commands(unregister_guilds=[guild_id])
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In 0: Invalid application command id provided
+Ignoring exception in on_interaction
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 770, in process_application_commands
+    command = self._application_commands[interaction.data["id"]]
+KeyError: '968161761259839549'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1082, in on_interaction
+    await self.process_application_commands(interaction)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 788, in process_application_commands
+    await self.sync_commands(unregister_guilds=[guild_id])
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In 0: Invalid application command id provided
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "timer" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "timer" is not found
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "^^^" is not found
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Pyromancer
+**Suggested by:**
+<@!730355125377302540>
+Ignoring exception in on_connect
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1079, in on_connect
+    await self.sync_commands()
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 405 Method Not Allowed (error code: 0): 405: Method Not Allowed
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in on_connect
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1079, in on_connect
+    await self.sync_commands()
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 405 Method Not Allowed (error code: 0): 405: Method Not Allowed
+Ignoring exception in command invite:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 242, in invite
+    await ctx.respond(f"{ctx.author.mention} here is your invite link: {await client.invite(ctx.guild)}")
+AttributeError: 'Bot' object has no attribute 'invite'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: AttributeError: 'Bot' object has no attribute 'invite'
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in on_connect
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1079, in on_connect
+    await self.sync_commands()
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 405 Method Not Allowed (error code: 0): 405: Method Not Allowed
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in on_connect
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1079, in on_connect
+    await self.sync_commands()
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 405 Method Not Allowed (error code: 0): 405: Method Not Allowed
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in on_connect
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1079, in on_connect
+    await self.sync_commands()
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 405 Method Not Allowed (error code: 0): 405: Method Not Allowed
+Ignoring exception in command look_what_i_drew:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 113, in wrapped
+    ret = await coro(arg)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 807, in _invoke
+    await self.callback(ctx, **kwargs)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 219, in look_what_i_drew
+    t = generate_i_made(url)
+  File "/root/Art-Grind-Discord-bot/artbot.py", line 75, in generate_i_made
+    req = urllib.request.Request(url, headers=hdr)
+  File "/usr/lib/python3.9/urllib/request.py", line 320, in __init__
+    self.full_url = url
+  File "/usr/lib/python3.9/urllib/request.py", line 346, in full_url
+    self._parse()
+  File "/usr/lib/python3.9/urllib/request.py", line 375, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: 'This is one of them, automatic meme maker'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 801, in process_application_commands
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 321, in invoke
+    await injected(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/commands/core.py", line 119, in wrapped
+    raise ApplicationCommandInvokeError(exc) from exc
+discord.commands.errors.ApplicationCommandInvokeError: Application Command raised an exception: ValueError: unknown url type: 'This is one of them, automatic meme maker'
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "dump" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "dump" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "dump" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "dump" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "dump" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "dump" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "dump" is not found
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Theater 🎭 
+**Suggested by:**
+<@804913699231236097>
+Flowers🌹 
+**Suggested by:**
+<@804913699231236097>
+Ignoring exception in on_connect
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1079, in on_connect
+    await self.sync_commands()
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 405 Method Not Allowed (error code: 0): 405: Method Not Allowed
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in on_connect
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1079, in on_connect
+    await self.sync_commands()
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 405 Method Not Allowed (error code: 0): 405: Method Not Allowed
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in on_connect
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1079, in on_connect
+    await self.sync_commands()
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 405 Method Not Allowed (error code: 0): 405: Method Not Allowed
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Ignoring exception in on_connect
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1079, in on_connect
+    await self.sync_commands()
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 405 Method Not Allowed (error code: 0): 405: Method Not Allowed
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "bump" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "Microwave" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "server" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "server" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "lb" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "stats" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "top10" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "top10" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "add" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "removepoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "removepoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "removepoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "removepoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "removepoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "removepoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "top10" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "Today" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboard" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboard" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboard" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "^leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "anyone" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "addpoint" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "leaderboardscore" is not found
+Loaded cogs.mod
+
+All Cogs Loaded
+===============
+Logging into Discord...
+we have powered on, I an alive.
+Royalty 👑 
+**Suggested by:**
+<@730355125377302540>
+Ignoring exception in on_connect
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/client.py", line 390, in _run_event
+    await coro(*args, **kwargs)
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 1079, in on_connect
+    await self.sync_commands()
+  File "/usr/local/lib/python3.9/dist-packages/discord/bot.py", line 724, in sync_commands
+    await self.http.bulk_upsert_command_permissions(
+  File "/usr/local/lib/python3.9/dist-packages/discord/http.py", line 368, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 405 Method Not Allowed (error code: 0): 405: Method Not Allowed
+Ignoring exception in command status:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/discord/ext/commands/bot.py", line 366, in invoke
+    await ctx.command.invoke(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/ext/commands/core.py", line 947, in invoke
+    await self.prepare(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/ext/commands/core.py", line 877, in prepare
+    await self._parse_arguments(ctx)
+  File "/usr/local/lib/python3.9/dist-packages/discord/ext/commands/core.py", line 788, in _parse_arguments
+    kwargs[name] = await self.transform(ctx, param)
+  File "/usr/local/lib/python3.9/dist-packages/discord/ext/commands/core.py", line 606, in transform
+    raise MissingRequiredArgument(param)
+discord.ext.commands.errors.MissingRequiredArgument: status is a required argument that is missing.
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "pointadd" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "fullscore" is not found
+Ignoring exception in command None:
+discord.ext.commands.errors.CommandNotFound: Command "fullscore" is not found

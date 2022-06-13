@@ -254,6 +254,7 @@ async def dumpremoveduplicate(ctx):
     
 #add 1 point to score board 
 @client.command(help="Add 1 point to the score board")
+@commands.has_permissions(administrator=True)
 async def addpoint(ctx,*,user):
     with open('score.json', 'r') as f:
         data = json.load(f)
@@ -267,6 +268,7 @@ async def addpoint(ctx,*,user):
 
 #removes 1 point to score board
 @client.command(help="Remove 1 point to the score board")
+@commands.has_permissions(administrator=True)
 async def removepoint(ctx,*,user):
     with open('score.json', 'r') as f:
         data = json.load(f)
@@ -284,7 +286,7 @@ async def leaderboardscore(ctx):
     with open('score.json', 'r') as f:
         data = json.load(f)
         sorted_data = sorted(data.items(), key=lambda x: x[1], reverse=True)
-        em = discord.Embed(title="Top 10", description="Top 10 score board", color=0x00ff00)
+        em = discord.Embed(title="All Scores", description="Top 10 score board", color=0x00ff00)
         for i in sorted_data[:10]:
             id = i[0]
             id = id.replace("<@", "")
@@ -301,6 +303,7 @@ async def leaderboardscore(ctx):
 
         await ctx.send(embed=em)
 
+<<<<<<< HEAD
 @client.command(name="showstyleprompts",help = "Shows all style prompts")
 async def ShowStylePrompts_command(self, ctx):
     em = discord.Embed(title="Style Prompts", description=f"All current Styles DM tea for more to be added", color=0x20BEFF)
@@ -317,8 +320,52 @@ async def showstyleprompts_slash(self, ctx):
         em.add_field(name=f"{i+1}", value=f"{lines[i]}")
        
     await ctx.respond(embed=em)
+=======
+#full score board
+@client.command()
+async def fullscore(ctx):
+    with open('score.json', 'r') as f:
+        data = json.load(f)
+        sorted_data = sorted(data.items(), key=lambda x: x[1], reverse=True)
+        em = discord.Embed(title="Full leader board", description="If you want to see the top ten do ```leaderboardscore```", color=0x00ff00)
+        for i in sorted_data:
+            id = i[0]
+            id = id.replace("<@", "")
+            id = id.replace(">", "")
+            print(id)
+            try: 
+                user = await ctx.guild.fetch_member(id)
+                name = user.name
+                em.add_field(name=f"{name}", value=i[1] ,inline=False)
+
+            except:
+                em.add_field(name=f"{i[0]}", value=i[1] ,inline=False)
+    await ctx.send(embed=em)
+>>>>>>> 41c006b5c71ce5bbf227106154340c848c8cc005
 
 
+#birthday mode. When its a birthday use
+@client.command(help="Birthday mode")
+async def birthday(ctx):
+    ctx.message.delete()
+    channel = ctx.channel
+    em = discord.Embed(title="Happy Birthday! 🎉🍰🎂🥳", description="To Mr. <@804913699231236097> \n Hope you have a Great Birthday \n from the Art Grind Staff ", color=0x00ff00)
+    await channel.send(embed=em)
+
+   #style prompt command
+@client.command(name="styleprompt",help = "Prompts you a Style to draw")
+async def StylePrompt_command(ctx):
+        lines = open('StylePrompt.txt').read().splitlines()
+        myline =random.choice(lines)
+        em = discord.Embed(title="Style Prompt. Have fun making", description=f"{myline}", color=0x20BEFF)
+        await ctx.send(embed=em)
+
+@client.slash_command(name="styleprompt")
+async def styleprompt_slash(ctx):
+        lines = open('StylePrompt.txt').read().splitlines()
+        myline =random.choice(lines)
+        em = discord.Embed(title="Style Prompt. Have fun making", description=f"{myline}", color=0x20BEFF)
+        await ctx.respond(embed=em)
 
 
 
