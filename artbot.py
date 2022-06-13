@@ -55,6 +55,12 @@ intents.guilds=True
 
 client = commands.Bot(command_prefix= "^", intents=intents, presences = True, members = True, guilds=True, case_insensitive=True,allowed_mentions = discord.AllowedMentions(everyone=True))
 
+def warningrole(ctx):
+    #fetch server from id
+    server = client.get_guild(856677753108693002)
+    role = discord.utils.get(server.guild.roles, name="taskfailedwarning")
+    return role
+
 
 @client.event
 async def on_ready():
@@ -106,42 +112,62 @@ async def pingtest(ctx):
 @tasks.loop(time=time(12,00))
 async def weekly_challenge():
     '''runs every day at 1PM UTC'''
-    
+    server = client.get_guild(int(856677753108693002))
     # check if the day is monday
     today = datetime.utcnow().isoweekday()
     if today == 7:  # Monday == 7
         channel = client.get_channel(964936769277677578)
-        allmes = []
-        async for message in channel.history(limit=200):
-            allmes.append(message)
-        randoms = random.choice(allmes)
-        chennel2 = client.get_channel(915305657803108362)
-        em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
-        em.description = "Its your favorite time of the week again!\n"
-        em.add_field(name="Challenge :", value=randoms.content)
-        msg = await channel.fetch_message(randoms.id)
-        print(msg.content)
-        await chennel2.send(embed=em)
-        await chennel2.send(f'<@&856677753125208081>')
-        await msg.delete()
+        try:
+            allmes = []
+            async for message in channel.history(limit=200):
+                allmes.append(message)
+            randoms = random.choice(allmes)
+            chennel2 = client.get_channel(915305657803108362)
+            em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
+            em.description = "Its your favorite time of the week again!\n"
+            em.add_field(name="Challenge :", value=randoms.content)
+            msg = await channel.fetch_message(randoms.id)
+            print(msg.content)
+            await chennel2.send(embed=em)
+            await chennel2.send(f'<@&856677753125208081>')
+            await msg.delete()
+        except:
+            #for people with role
+            role = warningrole()
+            for member in role.members:
+                try:
+                    await member.send(f"Get moving the weekly challenge failed to send. There was not one")
+                except:
+                    pass
+
 
 @client.command()
 async def test(ctx):
 
-    channel = client.get_channel(964936769277677578)
+    channel = client.get_channel(985552463174205490)
+    try:
+        allmes = []
+        async for message in channel.history(limit=200):
+            allmes.append(message)
 
-    allmes = []
-    async for message in channel.history(limit=200):
-        allmes.append(message)
+        randoms = random.choice(allmes)
+        chennel2 = 985552463174205490
+        em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
+        em.description = "Its your favorite time of the week again!\n"
+    
+        em.add_field(name="Challenge :", value=randoms.content)
+        msg = await channel.fetch_message(randoms.id)
+        await ctx.send(embed=em)
+        await ctx.send(f'<@&856677753125208081>')
+    except:
+            #for people with role
+            role = warningrole(856677753108693002)
+            for member in role.members:
+                try:
+                    await member.send(f"Get moving the weekly challenge failed to send. There was not one")
+                except:
+                    pass
 
-    randoms = random.choice(allmes)
-    chennel2 = 964936769277677578
-    em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
-    em.description = "Its your favorite time of the week again!\n"
-    em.add_field(name="Challenge :", value=randoms.content)
-    msg = await channel.fetch_message(randoms.id)
-    await ctx.send(embed=em)
-    await ctx.send(f'<@&856677753125208081>')
 
 @client.slash_command()
 async def code(ctx):
@@ -275,6 +301,22 @@ async def leaderboardscore(ctx):
 
         await ctx.send(embed=em)
 
+@client.command(name="showstyleprompts",help = "Shows all style prompts")
+async def ShowStylePrompts_command(self, ctx):
+    em = discord.Embed(title="Style Prompts", description=f"All current Styles DM tea for more to be added", color=0x20BEFF)
+    lines = open('databases/StylePrompt.txt').read().splitlines()
+    for i in range(len(lines)):
+        em.add_field(name=f"{i+1}", value=f"{lines[i]}")
+       
+    await ctx.send(embed=em)
+@client.slash_command(name="showstyleprompts")
+async def showstyleprompts_slash(self, ctx):
+    em = discord.Embed(title="Style Prompts", description=f"All current Styles DM tea for more to be added", color=0x20BEFF)
+    lines = open('databases/StylePrompt.txt').read().splitlines()
+    for i in range(len(lines)):
+        em.add_field(name=f"{i+1}", value=f"{lines[i]}")
+       
+    await ctx.respond(embed=em)
 
 
 
