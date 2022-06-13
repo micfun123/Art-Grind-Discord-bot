@@ -303,7 +303,6 @@ async def leaderboardscore(ctx):
 
         await ctx.send(embed=em)
 
-<<<<<<< HEAD
 @client.command(name="showstyleprompts",help = "Shows all style prompts")
 async def ShowStylePrompts_command(self, ctx):
     em = discord.Embed(title="Style Prompts", description=f"All current Styles DM tea for more to be added", color=0x20BEFF)
@@ -320,7 +319,6 @@ async def showstyleprompts_slash(self, ctx):
         em.add_field(name=f"{i+1}", value=f"{lines[i]}")
        
     await ctx.respond(embed=em)
-=======
 #full score board
 @client.command()
 async def fullscore(ctx):
@@ -341,7 +339,6 @@ async def fullscore(ctx):
             except:
                 em.add_field(name=f"{i[0]}", value=i[1] ,inline=False)
     await ctx.send(embed=em)
->>>>>>> 41c006b5c71ce5bbf227106154340c848c8cc005
 
 
 #birthday mode. When its a birthday use
