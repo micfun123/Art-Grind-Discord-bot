@@ -22,7 +22,7 @@ class halloffame(commands.Cog):
         tosend = 991740480398311544
         content = await self.client.get_channel(channel).fetch_message(message)
         for reaction in content.reactions:
-            if reaction.emoji == "♥️":
+            if reaction.emoji == "♥️" or reaction.emoji == "❤️":
                 if reaction.count == 10:
                     await self.client.get_channel(tosend).send(f"{content.attachments[0]}")
                     madeby = content.author.name
