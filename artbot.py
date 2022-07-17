@@ -10,7 +10,7 @@ from os import listdir
 from os.path import isfile, join
 import os
 from dotenv import load_dotenv
-from PIL import Image, ImageDraw, ImageFont , ImageEnhance
+from PIL import Image, ImageDraw, ImageFont , ImageEnhance,ImageColor
 from io import BytesIO
 from datetime import datetime,time
 import textwrap
@@ -325,14 +325,8 @@ async def showstyleprompts_slash(self, ctx):
 @client.slash_command()
 async def randomcolour(ctx):
     HEX_random = discord.Colour.from_rgb(random.randint(0,255),random.randint(0,255),random.randint(0,255))
-    em = discord.Embed(title="Random Colour", description=f"{ctx.author.mention} here is your random colour: {HEX_random}", color=random.randint(0,0xffffff))
-    #make image
-    img = Image.new('RGB', (300, 200), (228, 150, 150))
-    d = BytesIO()
-    d.seek(0)
-    img.save(d, "PNG")
-    d.seek(0)
-    await ctx.send(file=discord.File(d, "meme.png"))
+    em = discord.Embed(title="Random Colour", description=f"{ctx.author.mention} here is your random colour: {HEX_random}", color=HEX_random)
+    
     await ctx.respond(embed=em)
 
 #full score board

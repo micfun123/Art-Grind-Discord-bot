@@ -1,4 +1,4 @@
-from errno import EMEDIUMTYPE
+
 from imp import reload
 from urllib.request import proxy_bypass
 import discord
