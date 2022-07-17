@@ -1,3 +1,4 @@
+from email.mime import image
 from pydoc import describe
 from string import whitespace
 from unicodedata import name
@@ -16,6 +17,7 @@ import textwrap
 import urllib
 import asyncio
 import json
+import io
 
 load_dotenv()
 
@@ -319,6 +321,20 @@ async def showstyleprompts_slash(self, ctx):
         em.add_field(name=f"{i+1}", value=f"{lines[i]}")
        
     await ctx.respond(embed=em)
+
+@client.slash_command()
+async def randomcolour(ctx):
+    HEX_random = discord.Colour.from_rgb(random.randint(0,255),random.randint(0,255),random.randint(0,255))
+    em = discord.Embed(title="Random Colour", description=f"{ctx.author.mention} here is your random colour: {HEX_random}", color=random.randint(0,0xffffff))
+    #make image
+    img = Image.new('RGB', (300, 200), (228, 150, 150))
+    d = BytesIO()
+    d.seek(0)
+    img.save(d, "PNG")
+    d.seek(0)
+    await ctx.send(file=discord.File(d, "meme.png"))
+    await ctx.respond(embed=em)
+
 #full score board
 @client.command()
 async def fullscore(ctx):
