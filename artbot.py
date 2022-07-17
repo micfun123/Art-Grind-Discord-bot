@@ -117,7 +117,7 @@ async def weekly_challenge():
     server = client.get_guild(int(856677753108693002))
     # check if the day is monday
     today = datetime.utcnow().isoweekday()
-    if today == 7:  # Monday == 7
+    if today == 5:  # Monday == 7
         channel = client.get_channel(964936769277677578)
         try:
             allmes = []
