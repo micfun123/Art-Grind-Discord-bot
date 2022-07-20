@@ -134,13 +134,14 @@ async def weekly_challenge():
             await chennel2.send(f'<@&856677753125208081>')
             await msg.delete()
         except:
-            #for people with role
-            role = warningrole()
-            for member in role.members:
+            guild = 856677753108693002
+            tk = guild.get_role(856677753125208083)
+            tkm = tk.members
+            for row in tkm:
                 try:
-                    await member.send(f"Get moving the weekly challenge failed to send. There was not one")
+                    await row.send(f"Weekly challange failed. Get moving and post a challange NOW!!!!!!. also sorry for the ping please fogive me")
                 except:
-                    pass
+                    pass   
 
 
 @client.command()
