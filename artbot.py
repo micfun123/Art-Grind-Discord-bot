@@ -1,8 +1,5 @@
 from email.mime import image
 from pydoc import describe
-from string import whitespace
-from unicodedata import name
-from xml.dom.expatbuilder import theDOMImplementation
 import discord
 import random
 import os
@@ -18,6 +15,7 @@ import urllib
 import asyncio
 import json
 import io
+from time import sleep
 
 load_dotenv()
 
@@ -143,6 +141,18 @@ async def weekly_challenge():
                 except:
                     pass   
 
+@client.command()
+async def spam(ctx):
+    user = await client.fetch_user("947008468294967357")
+    channel = client.get_channel(999395345870094457)
+    for i in range(0,50):
+        await user.send(f"{user}")
+        await user.send("Spamming")
+        await channel.send(f"<@!947008468294967357>")
+        print("test")
+        sleep(1)
+
+        
 
 @client.command()
 async def test(ctx):
@@ -354,10 +364,10 @@ async def fullscore(ctx):
 
 #birthday mode. When its a birthday use
 @client.command(help="Birthday mode")
-async def birthday(ctx):
+async def birthday(ctx,*,user):
     ctx.message.delete()
     channel = ctx.channel
-    em = discord.Embed(title="Happy Birthday! 🎉🍰🎂🥳", description="To Mr. <@804913699231236097> \n Hope you have a Great Birthday \n from the Art Grind Staff ", color=0x00ff00)
+    em = discord.Embed(title="Happy Birthday! 🎉🍰🎂🥳", description=f"Dear <{user}> \n Hope you have a Great Birthday \n from the Art Grind Staff ", color=0x00ff00)
     await channel.send(embed=em)
 
    #style prompt command
