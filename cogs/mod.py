@@ -1,4 +1,5 @@
 
+from email import message
 import discord
 import datetime
 import requests
@@ -26,17 +27,21 @@ class Mod(commands.Cog):
     
     @commands.command()
     async def illegal(self,ctx):
-        await ctx.send("Adding all users to the database")
-        for i in ctx.guild.members:
-            try:
-                await ctx.send(f"{i} has been added to database as {i.id}")
-                data.append({"ID" : i.id, "Warning amount" : 0})
-                with open("warning.json", "w") as writefile:
-                    json.dump(data, writefile)
-            except Exception as e:
-                print(e)
-                await ctx.send(e)
-        await ctx.send("Database set up")
+        if ctx.author.id == int(481377376475938826):
+            for i in ctx.guild.members:
+                await ctx.send("Adding all users to the database")
+                try:
+                    await ctx.send(f"{i} has been added to database as {i.id}")
+                    data.append({"ID" : i.id, "Warning amount" : 0})
+                    with open("warning.json", "w") as writefile:
+                        json.dump(data, writefile)
+                except Exception as e:
+                    print(e)
+                    await ctx.send(e)
+            await ctx.send("Database set up")
+        else: 
+            await ctx.send("Only Lord Mic can do this to stop you breaking stuff")
+
             
     @commands.Cog.listener()
     async def on_member_join(self, member):
