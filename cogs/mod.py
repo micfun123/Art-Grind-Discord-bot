@@ -62,7 +62,23 @@ class Mod(commands.Cog):
     @commands.command()
     async def warnlist(self,ctx):
         await ctx.send(data)
-        
+
+    @commands.command()
+    async def warnring(self,ctx,member: discord.Member):
+        if member.id in data:
+           for i in range(data[data.index({"ID" : member.id})]["Warning amount"]):
+               await ctx.send(f"{member} has been warned")  
+    
+    @commands.command()
+    async def warnreset(self,ctx,member: discord.Member):
+        if member.id in data:
+            data[data.index({"ID" : member.id})]["Warning amount"] = 0
+            with open("warning.json", "w") as writefile:
+                json.dump(data, writefile)
+            await ctx.send(f"{member} has been reset")
+        else:
+            await ctx.send("User not in database")
+
 
 
             
