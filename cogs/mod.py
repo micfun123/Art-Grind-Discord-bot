@@ -1,8 +1,4 @@
 
-from imp import reload
-from re import A
-from turtle import pensize
-from urllib.request import proxy_bypass
 import discord
 import datetime
 import requests
