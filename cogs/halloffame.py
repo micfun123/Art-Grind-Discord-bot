@@ -3,8 +3,12 @@ from itertools import chain
 import discord
 from discord.ext import commands
 import asyncio
+import json
 
 from numpy import amax
+
+with open ("posts.json", "r") as readfile:
+   data = json.load(readfile)
 
 class halloffame(commands.Cog):
     def __init__(self, client):
@@ -22,11 +26,17 @@ class halloffame(commands.Cog):
         tosend = 991740480398311544
         content = await self.client.get_channel(channel).fetch_message(message)
         for reaction in content.reactions:
-            if reaction.emoji == "♥️" or reaction.emoji == "❤️":
+            if reaction.emoji == "❤️":
                 if reaction.count == 10:
-                    await self.client.get_channel(tosend).send(f"{content.attachments[0]}")
-                    madeby = content.author.name
-                    await self.client.get_channel(tosend).send(f"Made by: {madeby}")
+                    if message in data:
+                        pass
+                    else:
+                        await self.client.get_channel(tosend).send(f"{content.attachments[0]}")
+                        madeby = content.author.name
+                        await self.client.get_channel(tosend).send(f"Made by: {madeby}")
+                        data.append(message)
+                        with open ("posts.json", "w") as wfile:
+                            json.dump(data, wfile)
                     break
 
                     
