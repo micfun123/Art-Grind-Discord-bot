@@ -32,10 +32,7 @@ class halloffame(commands.Cog):
                         pass
                     else:
                         if channel == 891472246827257876:
-                            file = content.attachments[0]
-                            file.filename = f"SPOILER_{file.filename}"
-                            spoiler = await file.to_file()
-                            await self.client.get_channel(tosend).send(f"{spoiler}")
+                            await self.client.get_channel(tosend).send(f"|| {content.attachments[0]} ||")
                             madeby = content.author.name
                             await self.client.get_channel(tosend).send(f"Made by: {madeby} **warning this image is has gore**")
                             data.append(message)
