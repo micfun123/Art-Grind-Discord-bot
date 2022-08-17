@@ -31,13 +31,26 @@ class halloffame(commands.Cog):
                     if message in data:
                         pass
                     else:
-                        await self.client.get_channel(tosend).send(f"{content.attachments[0]}")
-                        madeby = content.author.name
-                        await self.client.get_channel(tosend).send(f"Made by: {madeby}")
-                        data.append(message)
-                        with open ("posts.json", "w") as wfile:
-                            json.dump(data, wfile)
+                        if channel == 891472246827257876:
+                            file = content.attachments[0]
+                            file.filename = f"SPOILER_{file.filename}"
+                            spoiler = await file.to_file()
+                            await self.client.get_channel(tosend).send(f"{spoiler}")
+                            madeby = content.author.name
+                            await self.client.get_channel(tosend).send(f"Made by: {madeby} **warning this image is has gore**")
+                            data.append(message)
+                            with open ("posts.json", "w") as wfile:
+                                json.dump(data, wfile)
+                        else:
+                            await self.client.get_channel(tosend).send(f"{content.attachments[0]}")
+                            madeby = content.author.name
+                            await self.client.get_channel(tosend).send(f"Made by: {madeby}")
+                            data.append(message)
+                            with open ("posts.json", "w") as wfile:
+                                json.dump(data, wfile)
+                    
                     break
+
 
                     
             
