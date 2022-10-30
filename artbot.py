@@ -190,7 +190,7 @@ async def code(ctx):
     
 @client.slash_command(guild_ids=[856677753108693002],description="Suggest a theme for the weekly challenge")
 async def suggest_theme(ctx,theme):
-    em = discord.Embed(title="Suggestion", description=f"{theme}", color=0x00ff00)
+    em = discord.Embed(title="Suggestion", description=f"{theme}\n Suggested by: {ctx.author.name}", color=0x00ff00)
     await ctx.respond("sent")
     channelsend = client.get_channel(967784275216846968)
     await channelsend.send(embed=em)
