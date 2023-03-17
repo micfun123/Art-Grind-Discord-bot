@@ -16,6 +16,7 @@ import asyncio
 import json
 import io
 from time import sleep
+import sqlite3
 
 load_dotenv()
 
@@ -53,7 +54,7 @@ intents.presences = True
 intents.members = True
 intents.guilds=True
 
-client = commands.Bot(command_prefix= "^", intents=intents, presences = True, members = True, guilds=True, case_insensitive=True,allowed_mentions = discord.AllowedMentions(everyone=True))
+client = commands.Bot(command_prefix= "+", intents=intents, presences = True, members = True, guilds=True, case_insensitive=True,allowed_mentions = discord.AllowedMentions(everyone=True))
 
 def warningrole(ctx):
     #fetch server from id
@@ -116,13 +117,13 @@ async def weekly_challenge():
     # check if the day is monday
     today = datetime.utcnow().isoweekday()
     if today == 5:  # Monday == 7
-        channel = client.get_channel(964936769277677578)
+        channel = client.get_channel(1086336641817378968)
         try:
             allmes = []
             async for message in channel.history(limit=200):
                 allmes.append(message)
             randoms = random.choice(allmes)
-            chennel2 = client.get_channel(915305657803108362)
+            chennel2 = client.get_channel(1086336788446056609)
             em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
             em.description = "Its your favorite time of the week again!\n"
             em.add_field(name="Challenge :", value=randoms.content)
@@ -384,6 +385,7 @@ async def styleprompt_slash(ctx):
         myline =random.choice(lines)
         em = discord.Embed(title="Style Prompt. Have fun making", description=f"{myline}", color=0x20BEFF)
         await ctx.respond(embed=em)
+   
 
 
 
