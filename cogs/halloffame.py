@@ -54,7 +54,7 @@ class halloffame(commands.Cog):
         await ctx.send("Checking all messages for 10 ♥️")
         tosend = 1086347720463220786
         for channel in ctx.guild.text_channels:
-            for message in channel.history(limit=300):
+            for message in await channel.history(limit=None).flatten():
                 for reaction in message.reactions:
                     if reaction.emoji == "❤️":
                         if reaction.count == 10:
