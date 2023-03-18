@@ -31,7 +31,7 @@ class halloffame(commands.Cog):
                     if message in data:
                         pass
                     else:
-                        if channel == 891472246827257876:
+                        if channel == 1086347720463220786:
                             await self.client.get_channel(tosend).send(f"|| {content.attachments[0]} ||")
                             madeby = content.author.name
                             await self.client.get_channel(tosend).send(f"Made by: {madeby} **warning this image is has gore**")

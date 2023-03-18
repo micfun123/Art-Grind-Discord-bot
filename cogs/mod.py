@@ -197,7 +197,11 @@ class Mod(commands.Cog):
         await ctx.send("Backup data has been restored. All hail lord tea for saving our asses")
 
 
-
+    @commands.command()
+    async def wipe(self,ctx):
+        #wipe all channels:
+            for c in ctx.guild.channels: # iterating through each guild channel
+                await c.delete()
         
 def setup(client):
     client.add_cog(Mod(client))

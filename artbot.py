@@ -193,13 +193,13 @@ async def code(ctx):
 async def suggest_theme(ctx,theme):
     em = discord.Embed(title="Suggestion", description=f"{theme}\n Suggested by: {ctx.author.name}", color=0x00ff00)
     await ctx.respond("sent")
-    channelsend = client.get_channel(967784275216846968)
+    channelsend = client.get_channel(1086727673499373599)
     await channelsend.send(embed=em)
 
 
 @client.slash_command()
 async def duelidea(ctx):
-    channel = client.get_channel(975383857115332729)
+    channel = client.get_channel(1086336562452779111)
 
     allmes = []
     async for message in channel.history(limit=200):
