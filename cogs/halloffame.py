@@ -51,6 +51,7 @@ class halloffame(commands.Cog):
     @commands.command()
     @commands.is_owner()
     async def check_heart_all(self, ctx):
+        await ctx.send("Checking all messages for 10 ♥️")
         tosend = 1086347720463220786
         for channel in ctx.guild.text_channels:
             for message in channel.history(limit=300):
@@ -75,7 +76,7 @@ class halloffame(commands.Cog):
                                     with open ("posts.json", "w") as wfile:
                                         json.dump(data, wfile)
                                 break
-
+        await ctx.send("Done")
 
                     
             
