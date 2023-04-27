@@ -136,72 +136,114 @@ class Mod(commands.Cog):
             await db.commit()
 
             # Backup channels
-            for channel in ctx.guild.channels:
-                try:
-                    await db.execute("INSERT INTO channel_backup VALUES (?,?,?,?)", (str(channel.category.name), str(channel.name), int(channel.id), str(channel.type)))
-                    await db.commit()
-                except:
-                    pass
+            for category in ctx.guild.categories:
+                for channel in category.channels:
+                    try:
+                        # Backup channel information
+                        await db.execute("INSERT INTO channel_backup VALUES (?,?,?,?)", (str(category.name), str(channel.name), str(channel.id), str(channel.type)))
+                        await db.commit()
 
+                    except Exception as e:
+                        await ctx.send(f"Error backing up {channel.name}: {e}")
+
+            await ctx.send("Backup of channels complete.")
+
+        # Open a new connection to the database for backing up roles
+        async with aiosqlite.connect("backup.db") as db:
             # Create backup table for roles
             await db.execute("CREATE TABLE IF NOT EXISTS role_backup (role_id TEXT, role_name TEXT, color INTEGER, permissions INTEGER, position INTEGER)")
             await db.commit()
 
             # Backup roles
             for role in ctx.guild.roles:
-                if role.name != "@everyone":
-                    await db.execute("INSERT INTO role_backup VALUES (?,?,?,?,?)", (int(role.id), role.name, role.color.value, role.permissions.value, role.position))
+                try:
+                    # Backup role information
+                    await db.execute("INSERT INTO role_backup VALUES (?,?,?,?,?)", (str(role.id), str(role.name), role.color.value, role.permissions.value, role.position))
                     await db.commit()
 
-            await ctx.send("Backup complete.")
+                except Exception as e:
+                    await ctx.send(f"Error backing up {role.name}: {e}")
 
-              
+        await ctx.send("Backup of roles complete.")
+        await ctx.send("Backup complete.")
 
-    
+
+
+                
     @commands.command()
     @commands.has_permissions(manage_messages=True)
     async def restore(self, ctx):
+        await ctx.send("Restoring from backup...")
         async with aiosqlite.connect("backup.db") as db:
             # Restore channels
-            channel_rows = await db.execute("SELECT * FROM channel_backup")
-            channel_rows = await channel_rows.fetchall()
-            for row in channel_rows:
+            await db.execute("SELECT category, channel, channel_id, channel_type FROM channel_backup")
+            channel_rows = await db.fetchall()
+            for channel_row in channel_rows:
+                category_name = channel_row[0]
+                channel_name = channel_row[1]
+                channel_id = int(channel_row[2])
+                channel_type = channel_row[3]
                 try:
-                    category_name, channel_name, channel_id, channel_type = row
                     category = discord.utils.get(ctx.guild.categories, name=category_name)
-                    if category is None:
+                    if not category:
                         category = await ctx.guild.create_category(category_name)
                     if channel_type == "text":
-                        await category.create_text_channel(channel_name, position=0)
+                        await category.create_text_channel(channel_name)
                     elif channel_type == "voice":
-                        await category.create_voice_channel(channel_name, position=0)
-                except: 
-                    pass
-
+                        await category.create_voice_channel(channel_name)
+                except Exception as e:
+                    await ctx.send(f"Error restoring {channel_name}: {e}")
+            
             # Restore roles
-            role_rows = await db.execute("SELECT * FROM role_backup")
-            role_rows = await role_rows.fetchall()
-            for row in role_rows:
+            await db.execute("SELECT role_id, role_name, color, permissions, position FROM role_backup")
+            role_rows = await db.fetchall()
+            for role_row in role_rows:
+                role_id = int(role_row[0])
+                role_name = role_row[1]
+                color = int(role_row[2])
+                permissions = discord.Permissions(int(role_row[3]))
+                position = int(role_row[4])
                 try:
-                    role_id, role_name, color, permissions, position = row
-                    role = discord.utils.get(ctx.guild.roles, id=int(role_id))
-                    if role is None:
-                        role = await ctx.guild.create_role(id=int(role_id), name=role_name, color=discord.Color(color), permissions=discord.Permissions(permissions), position=position)
+                    role = discord.utils.get(ctx.guild.roles, id=role_id)
+                    if not role:
+                        role = await ctx.guild.create_role(id=role_id, name=role_name, color=discord.Color(color), permissions=permissions)
                     else:
-                        await role.edit(name=role_name, color=discord.Color(color), permissions=discord.Permissions(permissions), position=position)
-                except:
-                    pass
-
-
+                        await role.edit(name=role_name, color=discord.Color(color), permissions=permissions)
+                    await role.edit(position=position)
+                except Exception as e:
+                    await ctx.send(f"Error restoring {role_name}: {e}")
+            
+            # Restore channel permissions
+            await db.execute("SELECT channel_id, role_id, read_messages, send_messages, manage_messages, manage_channels FROM channel_permissions_backup")
+            channel_perm_rows = await db.fetchall()
+            for channel_perm_row in channel_perm_rows:
+                channel_id = int(channel_perm_row[0])
+                role_id = int(channel_perm_row[1])
+                read_messages = bool(channel_perm_row[2])
+                send_messages = bool(channel_perm_row[3])
+                manage_messages = bool(channel_perm_row[4])
+                manage_channels = bool(channel_perm_row[5])
+                try:
+                    channel = discord.utils.get(ctx.guild.channels, id=channel_id)
+                    role = discord.utils.get(ctx.guild.roles, id=role_id)
+                    if channel and role:
+                        overwrite = discord.PermissionOverwrite()
+                        overwrite.read_messages = read_messages
+                        overwrite.send_messages = send_messages
+                        overwrite.manage_messages = manage_messages
+                        overwrite.manage_channels = manage_channels
+                        await channel.set_permissions(role, overwrite=overwrite)
+                except Exception as e:
+                    await ctx.send(f"Error restoring permissions for {channel.name}: {e}")
+                    
         await ctx.send("Restore complete.")
-        await ctx.send("Backup data has been restored. All hail lord tea for saving our asses")
+    
+        await ctx.send("All hail lord tea for saving out asses")
+        await ctx.send("Consider donating to him: www.buymeacoffee.com/Michaelrbparker")
 
 
-    @commands.command()
-    async def wipe(self,ctx):
-        #wipe all channels:
-            for c in ctx.guild.channels: # iterating through each guild channel
-                await c.delete()
-        
+
+
+    
 def setup(client):
     client.add_cog(Mod(client))

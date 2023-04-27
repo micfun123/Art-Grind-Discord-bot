@@ -236,7 +236,7 @@ async def invite(ctx):
 @client.command(help="Dump")
 async def dump(ctx):
     
-    channel = client.get_channel(975383857115332729)
+    channel = client.get_channel(1086336562452779111)
 
     allmes = []
     async for message in channel.history(limit=200):
@@ -253,7 +253,7 @@ async def dump(ctx):
 @client.command(help="Dump")
 async def dumpremoveduplicate(ctx):
     
-    channel = client.get_channel(975383857115332729)
+    channel = client.get_channel(1086336562452779111)
 
     allmes = []
     async for message in channel.history(limit=200):
@@ -265,6 +265,7 @@ async def dumpremoveduplicate(ctx):
         await ctx.send(i.content)
 
     await ctx.send(f"{t}")
+
     
 #add 1 point to score board 
 @client.command(help="Add 1 point to the score board")
@@ -387,8 +388,11 @@ async def styleprompt_slash(ctx):
         await ctx.respond(embed=em)
    
 
-
-
+@client.command(name="dump_proton",help = "Shows all style prompts")
+async def dump_proton_commands(ctx):
+    lines = open('duel.txt').read().splitlines()
+    for i in lines:
+        await ctx.send(i)
 
 TOKEN = os.getenv("DISCORD_TOKEN")
 
