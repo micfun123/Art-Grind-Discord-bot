@@ -395,16 +395,6 @@ async def dump_proton_commands(ctx):
         await ctx.send(i)
 
 
-#if server icon is changed
-@client.event
-async def on_guild_update(before, after):
-    if before.icon != after.icon:
-        #set the server icon  a cat image
-        with open('images/icon.jpg', 'rb') as f:
-            icon = f.read()
-        await after.edit(icon=icon)
-
-
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 def start_bot(client):
