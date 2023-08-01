@@ -53,16 +53,19 @@ class ChatRevive(commands.Cog):
         if channel is None:
             pass
         else:
-            #see if the revive_amount of messages were send longer than 2h ago
-            async for message in channel.history(limit=amount):
-                #check so see if the oldest message is older than 2h
-                uctmessage = message.created_at.replace(tzinfo=None)
-                if (datetime.utcnow() - uctmessage).total_seconds() > 7200:
-                    #if it is, send a message in the channel saying that the chat has been revived
-                    await channel.send("Its been a bit quiet in here, so um <@&1135308788614823946>")
-                print("revive loop ended")
-                print((datetime.utcnow() - uctmessage).total_seconds())
+            messages = await channel.history(limit=amount).flatten()
+            oldest = messages[-1]
+            uctmessage = oldest.created_at.replace(tzinfo=None)
+            if (datetime.utcnow() - uctmessage).total_seconds() > 7200:
+                #if it is, send a message in the channel saying that the chat has been revived
+                await channel.send("Its been a bit quiet in here, so um <@&1135308788614823946>")
+            print("revive loop ended")
+            print((datetime.utcnow() - uctmessage).total_seconds())
         
+                
+                
+
+
     @revive_loop.before_loop
     async def before_revive_loop(self):
         await self.client.wait_until_ready()
