@@ -2,8 +2,18 @@ import discord
 from discord.ext import commands, tasks
 import asyncio
 import json
+import random
 import time
 from datetime import datetime
+
+chatprompts = [
+    "I am a kind of coat that can only be put on when wet. What am I? \n ||A coat of paint||",
+    "What is the best thing to do if a bull charges you? \n ||Pay him||",
+    "Why did the vampire take art class? \n ||He wanted to learn how to draw blood||",
+    "What do you call a gorilla that plays with clay? \n ||A Hairy Potter!||",
+    "They put pictures on me \n then take pictures of me \n to share with the world \n \n But the pictures disappear \n as my end draws near \n and anxious heartbeats stilled \n \n I am sought after very wide \n especially after every night \n when things are put in motion \n \n And after a little while \n I will be able to defile \n your ability to sleep with devotion \n \n What am I? \n ||Cappuccino||",
+    "What do you call a mom who can’t draw? \n ||Tracy||"
+]
 
 class ChatRevive(commands.Cog):
     def __init__(self, client):
@@ -58,7 +68,8 @@ class ChatRevive(commands.Cog):
             uctmessage = oldest.created_at.replace(tzinfo=None)
             if (datetime.utcnow() - uctmessage).total_seconds() > 7200:
                 #if it is, send a message in the channel saying that the chat has been revived
-                await channel.send("Its been a bit quiet in here, so um <@&1135308788614823946>")
+                ridder = random.choice(chatprompts)
+                await channel.send(f"Its been a bit quiet in here, so um this is awkward... \n \n {ridder}")
             print("revive loop ended")
             print((datetime.utcnow() - uctmessage).total_seconds())
         
