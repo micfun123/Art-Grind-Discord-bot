@@ -12,7 +12,17 @@ chatprompts = [
     "Why did the vampire take art class? \n ||He wanted to learn how to draw blood||",
     "What do you call a gorilla that plays with clay? \n ||A Hairy Potter!||",
     "They put pictures on me \n then take pictures of me \n to share with the world \n \n But the pictures disappear \n as my end draws near \n and anxious heartbeats stilled \n \n I am sought after very wide \n especially after every night \n when things are put in motion \n \n And after a little while \n I will be able to defile \n your ability to sleep with devotion \n \n What am I? \n ||Cappuccino||",
-    "What do you call a mom who can’t draw? \n ||Tracy||"
+    "What do you call a mom who can’t draw? \n ||Tracy||",
+    "why couldn’t the man afford expensive art? \n || He had no Monet.||",
+    "What do you call a painting of a cat? \n ||A paw-trait||",
+    "What do you call a painting of a dog? \n ||A paw-trait||",
+    "Why was the artist hauled to court? \n ||To face the mosaic.||",
+    "Why did Van Gogh become a painter? \n ||Because he didn’t have an ear for music.||",
+    "What is it called when someone mislabels a color? \n || A false ac-hue-sation.|| ",
+    "When an artist meets his rival, what does he say? \n ||I am challenging you for a doodle.||"
+
+
+        
 ]
 
 class ChatRevive(commands.Cog):
