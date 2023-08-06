@@ -19,7 +19,11 @@ chatprompts = [
     "Why was the artist hauled to court? \n ||To face the mosaic.||",
     "Why did Van Gogh become a painter? \n ||Because he didn’t have an ear for music.||",
     "What is it called when someone mislabels a color? \n || A false ac-hue-sation.|| ",
-    "When an artist meets his rival, what does he say? \n ||I am challenging you for a doodle.||"
+    "When an artist meets his rival, what does he say? \n ||I am challenging you for a doodle.||",
+    "What did the angry photographer say at the wedding? \n ||I feel like I will snap at any moment. ||",
+    "Why did the boy never try to become a professional photographer? \n || He just couldn't picture himself being one. ||"
+
+
 
 
         
