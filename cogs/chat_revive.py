@@ -21,13 +21,13 @@ chatprompts = [
     "What is it called when someone mislabels a color? \n || A false ac-hue-sation.|| ",
     "When an artist meets his rival, what does he say? \n ||I am challenging you for a doodle.||",
     "What did the angry photographer say at the wedding? \n ||I feel like I will snap at any moment. ||",
-    "Why did the boy never try to become a professional photographer? \n || He just couldn't picture himself being one. ||"
-
-
-
-
-        
+    "Why did the boy never try to become a professional photographer? \n || He just couldn't picture himself being one. ||",
+    "Even if you’re afraid of paint one day you’ll have to face paint",
+    "Did you see the display of still-life art? It was not at all moving",
+    "A friend of mine tries to impress girls by drawing realistic pictures of the Ford F-150. \n He is a pickup artist."
+      
 ]
+    #move to a file soon
 
 class ChatRevive(commands.Cog):
     def __init__(self, client):
