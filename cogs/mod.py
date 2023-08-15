@@ -241,6 +241,24 @@ class Mod(commands.Cog):
         await ctx.send("All hail lord tea for saving out asses")
         await ctx.send("Consider donating to him: www.buymeacoffee.com/Michaelrbparker")
 
+    #leave server command
+    @commands.command()
+    @commands.is_owner()
+    async def leave(self,ctx,sid):
+        try:
+            guild = await self.client.fetch_guild(sid)
+            await guild.leave()
+            await ctx.send("Left server")
+        except Exception as e:
+            await ctx.send("Error leaving server: " + e)
+
+    @commands.command()
+    @commands.is_owner()
+    async def say(self,ctx,*,message):
+        await ctx.message.delete()
+        await ctx.send(message)
+
+
 
 
 
