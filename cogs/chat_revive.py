@@ -91,7 +91,7 @@ class ChatRevive(commands.Cog):
             messages = await channel.history(limit=amount).flatten()
             oldest = messages[-1]
             uctmessage = oldest.created_at.replace(tzinfo=None)
-            if (datetime.utcnow() - uctmessage).total_seconds() > 7200:
+            if (datetime.utcnow() - uctmessage).total_seconds() > 14400:
                 #if it is, send a message in the channel saying that the chat has been revived
                 ridder = random.choice(chatprompts)
                 await channel.send(f"Its been a bit quiet in here, so um this is awkward... \n \n {ridder}")
