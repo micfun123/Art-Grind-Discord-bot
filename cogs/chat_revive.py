@@ -6,39 +6,13 @@ import random
 import time
 from datetime import datetime
 
-chatprompts = [
-    "I am a kind of coat that can only be put on when wet. What am I? \n ||A coat of paint||",
-    "What is the best thing to do if a bull charges you? \n ||Pay him||",
-    "Why did the vampire take art class? \n ||He wanted to learn how to draw blood||",
-    "What do you call a gorilla that plays with clay? \n ||A Hairy Potter!||",
-    "They put pictures on me \n then take pictures of me \n to share with the world \n \n But the pictures disappear \n as my end draws near \n and anxious heartbeats stilled \n \n I am sought after very wide \n especially after every night \n when things are put in motion \n \n And after a little while \n I will be able to defile \n your ability to sleep with devotion \n \n What am I? \n ||Cappuccino||",
-    "What do you call a mom who can’t draw? \n ||Tracy||",
-    "why couldn’t the man afford expensive art? \n || He had no Monet.||",
-    "What do you call a painting of a cat? \n ||A paw-trait||",
-    "What do you call a painting of a dog? \n ||A paw-trait||",
-    "Why was the artist hauled to court? \n ||To face the mosaic.||",
-    "Why did Van Gogh become a painter? \n ||Because he didn’t have an ear for music.||",
-    "What is it called when someone mislabels a color? \n || A false ac-hue-sation.|| ",
-    "When an artist meets his rival, what does he say? \n ||I am challenging you for a doodle.||",
-    "What did the angry photographer say at the wedding? \n ||I feel like I will snap at any moment. ||",
-    "Why did the boy never try to become a professional photographer? \n || He just couldn't picture himself being one. ||",
-    "Even if you’re afraid of paint one day you’ll have to face paint",
-    "Did you see the display of still-life art? It was not at all moving",
-    "A friend of mine tries to impress girls by drawing realistic pictures of the Ford F-150. \n He is a pickup artist.",
-    "I was going to tell a joke about a pencil, but there was no point.",
-    "What did the frustrated painter say to his wall?\n || I'll plaster you if you crack anymore.||",
-    "What did the art teacher say to her student? \n ||You are one art cookie.||",
-    " What is a tree’s favorite soda? \n ||Root Beer.|| ",
-    "What do you call a fake noodle? \n ||An impasta.||",
-    "What do you call a cow with no legs? \n ||Ground beef.||",
-    "What do you call a cow with two legs? \n ||Lean beef.||",
-    "What do you call a cow with all of its legs? \n ||High steaks.||",
-    "Why couldn't the sesame seed leave the casino? \n ||He was on a roll!||",
-    "Who's a dessert's favorite actor? \n ||Robert Brownie, Jr.||",
-    "When do you go at red and stop at green? \n ||When you’re eating a watermelon.||",
-    "Did you hear about the carrot detective? \n ||He got to the root of every case.||"
-]
-    
+
+def getpun():
+    with open("chatprompts.txt", "r", encoding="utf-8") as readfile:
+        chatprompts = readfile.readlines()
+        pun = random.choice(chatprompts)
+        return pun
+        
 
 class ChatRevive(commands.Cog):
     def __init__(self, client):
@@ -93,12 +67,23 @@ class ChatRevive(commands.Cog):
             uctmessage = oldest.created_at.replace(tzinfo=None)
             if (datetime.utcnow() - uctmessage).total_seconds() > 14400:
                 #if it is, send a message in the channel saying that the chat has been revived
-                ridder = random.choice(chatprompts)
+                ridder = getpun()
                 await channel.send(f"Its been a bit quiet in here, so um this is awkward... \n \n {ridder}")
             print("revive loop ended")
             print((datetime.utcnow() - uctmessage).total_seconds())
         
-                
+    @commands.command()
+    async def get_pun(self, ctx):
+        await ctx.message.delete()
+        pun = getpun()
+        await ctx.send(pun)        
+
+    @commands.command()
+    @commands.has_permissions(manage_messages=True)
+    async def add_pun(self, ctx, *, pun):
+        with open("chatprompts.txt", "a", encoding="utf-8") as writefile:
+            writefile.write("\n" + pun)
+        await ctx.send("Pun added")
                 
 
 
