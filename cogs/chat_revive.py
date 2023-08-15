@@ -24,10 +24,21 @@ chatprompts = [
     "Why did the boy never try to become a professional photographer? \n || He just couldn't picture himself being one. ||",
     "Even if you’re afraid of paint one day you’ll have to face paint",
     "Did you see the display of still-life art? It was not at all moving",
-    "A friend of mine tries to impress girls by drawing realistic pictures of the Ford F-150. \n He is a pickup artist."
-      
+    "A friend of mine tries to impress girls by drawing realistic pictures of the Ford F-150. \n He is a pickup artist.",
+    "I was going to tell a joke about a pencil, but there was no point.",
+    "What did the frustrated painter say to his wall?\n || I'll plaster you if you crack anymore.||",
+    "What did the art teacher say to her student? \n ||You are one art cookie.||",
+    " What is a tree’s favorite soda? \n ||Root Beer.|| ",
+    "What do you call a fake noodle? \n ||An impasta.||",
+    "What do you call a cow with no legs? \n ||Ground beef.||",
+    "What do you call a cow with two legs? \n ||Lean beef.||",
+    "What do you call a cow with all of its legs? \n ||High steaks.||",
+    "Why couldn't the sesame seed leave the casino? \n ||He was on a roll!||",
+    "Who's a dessert's favorite actor? \n ||Robert Brownie, Jr.||",
+    "When do you go at red and stop at green? \n ||When you’re eating a watermelon.||",
+    "Did you hear about the carrot detective? \n ||He got to the root of every case.||"
 ]
-    #move to a file soon
+    
 
 class ChatRevive(commands.Cog):
     def __init__(self, client):
