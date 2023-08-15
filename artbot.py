@@ -67,7 +67,7 @@ def warningrole(ctx):
 async def on_ready():
     # Setting `Playing ` status
     print("we have powered on, I an alive.")
-    await client.change_presence(activity=discord.Game(f"I do art stuff in {len(client.guilds)} servers."))
+    await client.change_presence(activity=discord.Game(f"with some paint and a brush"))
     weekly_challenge.start()
     infochannel = await client.fetch_channel(1086330333185708123)
     await infochannel.send("I am back online. Seems like I was down for a while. Sorry for the inconvenience")
