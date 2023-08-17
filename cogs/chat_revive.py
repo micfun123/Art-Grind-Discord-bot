@@ -52,7 +52,7 @@ class ChatRevive(commands.Cog):
 
     #start a loop that checks ever 2h if there has been the revive_amount of messages in the revive_channel
     #if there has been, send a message in the revive_channel saying that the chat has been revived
-    @tasks.loop(hours=2)
+    @tasks.loop(hours=4)
     async def revive_loop(self):
         print("revive loop started")
         with open("revive_channel.json", "r") as readfile:
