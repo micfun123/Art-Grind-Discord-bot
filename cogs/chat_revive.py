@@ -68,6 +68,7 @@ class ChatRevive(commands.Cog):
             if (datetime.utcnow() - uctmessage).total_seconds() > 14400:
                 #if it is, send a message in the channel saying that the chat has been revived
                 ridder = getpun()
+                ridder = ridder.replace("\n", "\n \n")
                 await channel.send(f"Its been a bit quiet in here, so um this is awkward... \n \n {ridder}")
             print("revive loop ended")
             print((datetime.utcnow() - uctmessage).total_seconds())
