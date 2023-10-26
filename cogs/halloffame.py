@@ -54,14 +54,14 @@ class halloffame(commands.Cog):
         await ctx.send("Checking all messages for 10 ♥️")
         tosend = 1086347720463220786
         for channel in ctx.guild.text_channels:
-            for message in await channel.history(limit=None).flatten():
+            for message in await channel.history(limit=5000).flatten():
                 for reaction in message.reactions:
                     if reaction.emoji == "❤️":
                         if reaction.count == 10:
                             if message.id in data:
                                 pass
                             else:
-                                if channel.id == 1086347720463220786:
+                                if channel.id == 1086410514348904529:
                                     await self.client.get_channel(tosend).send(f"|| {message.attachments[0]} ||")
                                     madeby = message.author.name
                                     await self.client.get_channel(tosend).send(f"Made by: {madeby} **warning this image is has gore**")
