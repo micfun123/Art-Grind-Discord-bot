@@ -117,34 +117,17 @@ async def pingtest(ctx):
 @tasks.loop(time=time(12,00))
 async def weekly_challenge():
     '''runs every day at 1PM UTC'''
-    server = client.get_guild(int(856677753108693002))
     # check if the day is monday
     today = datetime.utcnow().isoweekday()
     if today == 5:  # Monday == 7
-        channel = client.get_channel(1086336641817378968)
-        try:
-            allmes = []
-            async for message in channel.history(limit=200):
-                allmes.append(message)
-            randoms = random.choice(allmes)
-            chennel2 = client.get_channel(1086336788446056609)
-            em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
-            em.description = "Its your favorite time of the week again!\n"
-            em.add_field(name="Challenge :", value=randoms.content)
-            msg = await channel.fetch_message(randoms.id)
-            print(msg.content)
-            await chennel2.send(embed=em)
-            await chennel2.send(f'<@&856677753125208081>')
-            await msg.delete()
-        except:
-            guild = 856677753108693002
-            tk = guild.get_role(856677753125208083)
-            tkm = tk.members
-            for row in tkm:
-                try:
-                    await row.send(f"Weekly challange failed. Get moving and post a challange NOW!!!!!!. also sorry for the ping please fogive me")
-                except:
-                    pass   
+        message_channel = await client.fetch_channel(1086336641817378968)
+        channeltosend = await client.fetch_channel(1086336788446056609)
+        messages = await message_channel.history(limit=None).flatten()
+        message = random.choice(messages)
+        em = discord.Embed(title="Weekly Challenge", description=f"{message.content}", color=0x00ff00)
+        await channeltosend.send(embed=em)
+        await message.delete()
+
 
 @client.command()
 async def spam(ctx):
@@ -161,30 +144,13 @@ async def spam(ctx):
 
 @client.command()
 async def test(ctx):
-
-    channel = client.get_channel(985552463174205490)
-    try:
-        allmes = []
-        async for message in channel.history(limit=200):
-            allmes.append(message)
-
-        randoms = random.choice(allmes)
-        chennel2 = 985552463174205490
-        em = discord.Embed(title=f"weekly challenge",color=0x00ff00)
-        em.description = "Its your favorite time of the week again!\n"
-    
-        em.add_field(name="Challenge :", value=randoms.content)
-        msg = await channel.fetch_message(randoms.id)
-        await ctx.send(embed=em)
-        await ctx.send(f'<@&856677753125208081>')
-    except:
-            #for people with role
-            role = warningrole(856677753108693002)
-            for member in role.members:
-                try:
-                    await member.send(f"Get moving the weekly challenge failed to send. There was not one")
-                except:
-                    pass
+    message_channel = await client.fetch_channel(1086336641817378968)
+    channeltosend = await client.fetch_channel(1086336788446056609)
+    messages = await message_channel.history(limit=None).flatten()
+    message = random.choice(messages)
+    em = discord.Embed(title="Weekly Challenge", description=f"{message.content}", color=0x00ff00)
+    await channeltosend.send(embed=em)
+    await message.delete()
 
 
 @client.slash_command()
