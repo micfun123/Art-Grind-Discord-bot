@@ -126,6 +126,7 @@ async def weekly_challenge():
         message = random.choice(messages)
         em = discord.Embed(title="Weekly Challenge", description=f"{message.content}", color=0x00ff00)
         await channeltosend.send(embed=em)
+        await channeltosend.send(f'<@&856677753125208081>')
         await message.delete()
 
 
