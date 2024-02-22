@@ -3,6 +3,7 @@ from itertools import chain
 import discord
 from discord.ext import commands
 import asyncio
+import time
 import json
 
 from numpy import amax
@@ -54,33 +55,57 @@ class halloffame(commands.Cog):
         await ctx.send("Checking all messages for 10 ♥️")
         tosend = 1086347720463220786
         for channel in ctx.guild.text_channels:
-            for message in await channel.history(limit=5000).flatten():
-                for reaction in message.reactions:
-                    if reaction.emoji == "❤️":
-                        if reaction.count == 10:
-                            if message.id in data:
-                                pass
-                            else:
-                                if channel.id == 1086410514348904529:
-                                    await self.client.get_channel(tosend).send(f"|| {message.attachments[0]} ||")
-                                    madeby = message.author.name
-                                    await self.client.get_channel(tosend).send(f"Made by: {madeby} **warning this image is has gore**")
-                                    data.append(message.id)
-                                    with open ("posts.json", "w") as wfile:
-                                        json.dump(data, wfile)
+            try:
+                print(f"trying channel {channel.name}")
+                for message in await channel.history(limit=50000).flatten():
+                    for reaction in message.reactions:
+                        if reaction.emoji == "❤️":
+                            if reaction.count >= 10:
+                                if message.id in data:
+                                    pass
                                 else:
-                                    await self.client.get_channel(tosend).send(f"{message.attachments[0]}")
-                                    madeby = message.author.name
-                                    await self.client.get_channel(tosend).send(f"Made by: {madeby}")
-                                    data.append(message.id)
-                                    with open ("posts.json", "w") as wfile:
-                                        json.dump(data, wfile)
-                                break
+                                    if channel.id == 1086410514348904529:
+                                        await self.client.get_channel(tosend).send(f"|| {message.attachments[0]} ||")
+                                        madeby = message.author.name
+                                        await self.client.get_channel(tosend).send(f"Made by: {madeby} **warning this image is has gore**")
+                                        data.append(message.id)
+                                        with open ("posts.json", "w") as wfile:
+                                            json.dump(data, wfile)
+                                    else:
+                                        await self.client.get_channel(tosend).send(f"{message.attachments[0]}")
+                                        madeby = message.author.name
+                                        await self.client.get_channel(tosend).send(f"Made by: {madeby}")
+                                        data.append(message.id)
+                                        with open ("posts.json", "w") as wfile:
+                                            json.dump(data, wfile)
+                                    break
+            except:
+                pass
         await ctx.send("Done")
 
                     
-            
-            
+    @commands.command()
+    @commands.is_owner()
+    async def adder(self, ctx):
+        target_channel_id = 1086330350592086187  # Channel ID to check
+        target_emoji = "❤️"  # Heart emoji
+        
+        target_channel = await ctx.guild.fetch_channel(target_channel_id)
+        if target_channel:
+            await ctx.send(f"Checking messages in {target_channel.name}")
+            async for message in target_channel.history(limit=30000):
+                for reaction in message.reactions:
+                    if str(reaction.emoji) == target_emoji and reaction.count == 9:
+                        try:
+                            await message.add_reaction(target_emoji)
+                            print(f"Added {target_emoji} to message ID: {message.id}")
+                        except discord.HTTPException:
+                            print("Failed to add reaction. Insufficient permissions.")
+                        break  # Once a message is found with 9 ❤️, move to the next message
+                time.sleep(2)
+        else:
+            await ctx.send("Target channel not found.")
+
 
 def setup(client):
     client.add_cog(halloffame(client))
