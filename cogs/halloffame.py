@@ -8,17 +8,15 @@ import json
 
 from numpy import amax
 
-with open ("posts.json", "r") as readfile:
-   data = json.load(readfile)
+with open("posts.json", "r") as readfile:
+    data = json.load(readfile)
+
 
 class halloffame(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    
-
-            
-    #if any messages has 10 reactions of ♥️ echo message
+    # if any messages has 10 reactions of ♥️ echo message
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
         message = payload.message_id
@@ -33,20 +31,36 @@ class halloffame(commands.Cog):
                         pass
                     else:
                         if channel == 1086410514348904529:
-                            await self.client.get_channel(tosend).send(f"|| {content.attachments[0]} ||")
+                            await self.client.get_channel(tosend).send(
+                                f"|| {content.attachments[0]} ||"
+                            )
                             madeby = content.author.name
-                            await self.client.get_channel(tosend).send(f"Made by: {madeby} **warning this image is has gore**")
+                            await self.client.get_channel(tosend).send(
+                                f"Made by: {madeby} **warning this image is has gore**"
+                            )
                             data.append(message)
-                            with open ("posts.json", "w") as wfile:
+                            with open("posts.json", "w") as wfile:
                                 json.dump(data, wfile)
+                            # message the image author
+                            await content.author.send(
+                                "Your image has been added to the hall of fame, it is the crème de la crème of art. Its the art we heart"
+                            )
                         else:
-                            await self.client.get_channel(tosend).send(f"{content.attachments[0]}")
+                            await self.client.get_channel(tosend).send(
+                                f"{content.attachments[0]}"
+                            )
                             madeby = content.author.name
-                            await self.client.get_channel(tosend).send(f"Made by: {madeby}")
+                            await self.client.get_channel(tosend).send(
+                                f"Made by: {madeby}"
+                            )
                             data.append(message)
-                            with open ("posts.json", "w") as wfile:
+                            with open("posts.json", "w") as wfile:
                                 json.dump(data, wfile)
-                    
+
+                            await content.author.send(
+                                "Your image has been added to the hall of fame, it is the crème de la crème of art. Its the art we heart"
+                            )
+
                     break
 
     @commands.command()
@@ -65,31 +79,46 @@ class halloffame(commands.Cog):
                                     pass
                                 else:
                                     if channel.id == 1086410514348904529:
-                                        await self.client.get_channel(tosend).send(f"|| {message.attachments[0]} ||")
+                                        await self.client.get_channel(tosend).send(
+                                            f"|| {message.attachments[0]} ||"
+                                        )
                                         madeby = message.author.name
-                                        await self.client.get_channel(tosend).send(f"Made by: {madeby} **warning this image is has gore**")
+                                        await self.client.get_channel(tosend).send(
+                                            f"Made by: {madeby} **warning this image is has gore**"
+                                        )
                                         data.append(message.id)
-                                        with open ("posts.json", "w") as wfile:
+                                        with open("posts.json", "w") as wfile:
                                             json.dump(data, wfile)
+
+                                        # message the image author
+                                        await message.author.send(
+                                            "Your image has been added to the hall of fame, it is the crème de la crème of art. Its the art we heart"
+                                        )
                                     else:
-                                        await self.client.get_channel(tosend).send(f"{message.attachments[0]}")
+                                        await self.client.get_channel(tosend).send(
+                                            f"{message.attachments[0]}"
+                                        )
                                         madeby = message.author.name
-                                        await self.client.get_channel(tosend).send(f"Made by: {madeby}")
+                                        await self.client.get_channel(tosend).send(
+                                            f"Made by: {madeby}"
+                                        )
                                         data.append(message.id)
-                                        with open ("posts.json", "w") as wfile:
+                                        with open("posts.json", "w") as wfile:
                                             json.dump(data, wfile)
+                                        await message.author.send(
+                                            "Your image has been added to the hall of fame, it is the crème de la crème of art. Its the art we heart"
+                                        )
                                     break
             except:
                 pass
         await ctx.send("Done")
 
-                    
     @commands.command()
     @commands.is_owner()
     async def adder(self, ctx):
         target_channel_id = 1086330350592086187  # Channel ID to check
         target_emoji = "❤️"  # Heart emoji
-        
+
         target_channel = await ctx.guild.fetch_channel(target_channel_id)
         if target_channel:
             await ctx.send(f"Checking messages in {target_channel.name}")
