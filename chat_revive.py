@@ -12,7 +12,7 @@ def getpun():
         chatprompts = readfile.readlines()
         pun = random.choice(chatprompts)
         return pun
-        
+
 
 class ChatRevive(commands.Cog):
     def __init__(self, client):
@@ -48,10 +48,12 @@ class ChatRevive(commands.Cog):
         data["channel"] = channel.id
         with open("revive_channel.json", "w") as writefile:
             json.dump(data, writefile)
-        await ctx.send(f"Revive amount set to {amount} and channel set to {channel.mention}")
+        await ctx.send(
+            f"Revive amount set to {amount} and channel set to {channel.mention}"
+        )
 
-    #start a loop that checks ever 2h if there has been the revive_amount of messages in the revive_channel
-    #if there has been, send a message in the revive_channel saying that the chat has been revived
+    # start a loop that checks ever 2h if there has been the revive_amount of messages in the revive_channel
+    # if there has been, send a message in the revive_channel saying that the chat has been revived
     @tasks.loop(hours=4)
     async def revive_loop(self):
         print("revive loop started")
@@ -66,18 +68,20 @@ class ChatRevive(commands.Cog):
             oldest = messages[-1]
             uctmessage = oldest.created_at.replace(tzinfo=None)
             if (datetime.utcnow() - uctmessage).total_seconds() > 14400:
-                #if it is, send a message in the channel saying that the chat has been revived
+                # if it is, send a message in the channel saying that the chat has been revived
                 ridder = getpun()
                 ridder = ridder.encode("utf-8").decode("utf-8")
-                await channel.send(f"Its been a bit quiet in here, so um this is awkward... \n \n {ridder}")
+                await channel.send(
+                    f"Its been a bit quiet in here, so um this is awkward... \n \n {ridder}"
+                )
             print("revive loop ended")
             print((datetime.utcnow() - uctmessage).total_seconds())
-        
+
     @commands.command()
     async def get_pun(self, ctx):
         await ctx.message.delete()
         pun = getpun()
-        await ctx.send(pun)        
+        await ctx.send(pun)
 
     @commands.command()
     @commands.has_permissions(manage_messages=True)
@@ -85,18 +89,11 @@ class ChatRevive(commands.Cog):
         with open("chatprompts.txt", "a", encoding="utf-8") as writefile:
             writefile.write("\n" + pun)
         await ctx.send("Pun added")
-                
-
 
     @revive_loop.before_loop
     async def before_revive_loop(self):
         await self.client.wait_until_ready()
 
-
-
-    
-    
-            
 
 def setup(client):
     client.add_cog(ChatRevive(client))

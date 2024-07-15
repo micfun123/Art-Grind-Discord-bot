@@ -244,38 +244,6 @@ async def invite(ctx):
     )
 
 
-@client.command(help="Dump")
-async def dump(ctx):
-    channel = client.get_channel(1086336562452779111)
-
-    allmes = []
-    async for message in channel.history(limit=200):
-        allmes.append(message)
-
-    t = 0
-    for i in allmes:
-        t = t + 1
-        await ctx.send(i.content)
-
-    await ctx.send(f"{t}")
-
-
-@client.command(help="Dump")
-async def dumpremoveduplicate(ctx):
-    channel = client.get_channel(1086336562452779111)
-
-    allmes = []
-    async for message in channel.history(limit=200):
-        allmes.append(message)
-
-    t = 0
-    for i in allmes:
-        t = t + 1
-        await ctx.send(i.content)
-
-    await ctx.send(f"{t}")
-
-
 # add 1 point to score board
 @client.command(help="Add 1 point to the score board")
 @commands.has_permissions(administrator=True)
@@ -384,7 +352,12 @@ async def fullscore(ctx):
             description="If you want to see the top ten then do ```+leaderboardscore```",
             color=0x00FF00,
         )
+
+        count = 0
         for i in sorted_data:
+            if count >= 20:
+                break
+
             id = i[0]
             id = id.replace("<@", "")
             id = id.replace(">", "")
@@ -396,6 +369,9 @@ async def fullscore(ctx):
 
             except:
                 em.add_field(name=f"{i[0]}", value=i[1], inline=False)
+
+            count += 1
+
     await ctx.send(embed=em)
 
 
