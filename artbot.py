@@ -78,12 +78,12 @@ async def on_ready():
     await client.change_presence(activity=discord.Game(f"with some paint and a brush"))
     weekly_challenge.start()
     infochannel = await client.fetch_channel(1086330333185708123)
-    #await infochannel.send(
-    #    "I am back online. Seems like I was down for a while. Sorry for the inconvenience"
-    #)
-    #await infochannel.send(
-    #    f"Feel free to donate to me at <https://www.buymeacoffee.com/Michaelrbparker>"
-    #)
+    await infochannel.send(
+        "I am back online. Seems like I was down for a while. Sorry for the inconvenience"
+    )
+    await infochannel.send(
+        f"Feel free to donate to me at <https://www.buymeacoffee.com/Michaelrbparker>"
+    )
 
 
 @client.command(help="Gives you the ping of the bot")
