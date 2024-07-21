@@ -22,7 +22,7 @@ class pyduel(commands.Cog):
 
         # Calculate sleep duration
         sleep_duration = (
-            duration * 60 if duration_unit.lower() == "minutes" else duration * 60 * 24
+            duration * 60 if duration_unit.lower() == "minutes" or duration_unit.lower() == "mins"  else duration * 60 * 24
         )
         await asyncio.sleep(sleep_duration)
 
@@ -34,7 +34,7 @@ class pyduel(commands.Cog):
                 submissions.append(submission)
 
         # Send poll message
-        tosend = 1101590208698384454
+        tosend = 1086341959481831587
         channelsend = await self.client.fetch_channel(tosend)
 
         poll_embed = discord.Embed(
@@ -54,7 +54,7 @@ class pyduel(commands.Cog):
             "9️⃣",
             "🔟",
         ]
-
+        poll_message = await channelsend.send(embed=poll_embed)
         for i, submission in enumerate(submissions):
             if i >= len(reaction_emojis):
                 break
@@ -62,7 +62,7 @@ class pyduel(commands.Cog):
             await channelsend.send(
                 f"{reaction_emojis[i]}: {submission['url']} (Made by: {submission['author'].mention})"
             )
-        poll_message = await channelsend.send(embed=poll_embed)
+       
         # ping judge role 958172090509443083
         await channelsend.send("<@&958172090509443083>")
 
