@@ -148,5 +148,48 @@ class HallOfFame(commands.Cog):
         print("Done")
 
 
+    @commands.command()
+    @commands.is_owner()
+    async def force_add(self, ctx, message_id: int):
+        tosend = 1086347720463220786
+
+        content = await self.client.get_channel(1086330350592086187).fetch_message(message_id)
+        madeby = content.author.name
+        madebyid = content.author.id
+        if content.id in posts_data:
+            return
+        else:
+            if content.channel.id == 1086410514348904529:
+                await self.client.get_channel(tosend).send(
+                    f"|| {content.attachments[0]} ||"
+                )
+                await self.client.get_channel(tosend).send(
+                    f"Made by: {madeby} **warning this image has gore**"
+                )
+            else:
+                await self.client.get_channel(tosend).send(
+                    f"{content.attachments[0]}"
+                )
+                await self.client.get_channel(tosend).send(
+                    f"Made by: {madeby}"
+                )
+
+            posts_data.append(content.id)
+            with open("posts.json", "w") as wfile:
+                json.dump(posts_data, wfile)
+
+            # Update user frequency data
+            if madeby in user_frequencies:
+                user_frequencies[madebyid] += 1
+            else:
+                user_frequencies[madebyid] = 1
+
+            with open("user_frequencies.json", "w") as wfile:
+                json.dump(user_frequencies, wfile)
+
+            await content.author.send(
+                "Your image has been added to the hall of fame, it is the crème de la crème of art. It's the art we heart"
+            )
+
 def setup(client):
     client.add_cog(HallOfFame(client))
