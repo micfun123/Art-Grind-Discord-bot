@@ -142,9 +142,8 @@ class HallOfFame(commands.Cog):
                             and reaction.count == target_count
                         ):
                             await message.add_reaction("❤️")
-                            time.sleep(2)
                             break
-                    time.sleep(2)
+                    time.sleep(0.5)
         print("Done")
 
 
